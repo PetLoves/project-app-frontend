@@ -4,17 +4,12 @@ import './App.css';
 import CustomisedSlider from './slider.js';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isGoing: true,
-      numberOfGuests: 2
-    };
+  state = {
+    isGoing: true,
+    numberOfGuests: 2
+  };
 
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  handleInputChange(event) {
+  handleInputChange = event => {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
@@ -22,7 +17,7 @@ class App extends React.Component {
     this.setState({
       [name]: value
     });
-  }
+  };
 
   render() {
     return (
