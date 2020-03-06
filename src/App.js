@@ -28,8 +28,7 @@ function App() {
         1. I go running most days and hiking at the weekend
         2. Daily walks around 2-4 miles are great
         3. I like to potter around in the garden or occassionally go for a walk
-        4. I prefer or am unable to leave the house much. */
-
+        4. I prefer or am unable to leave the house much. */}
       </div>
     </div>
   );
