@@ -26,6 +26,29 @@ const animals = [
   }
 ];
 
+const questions = [
+  {
+    id: 1,
+    question: "Do you have a garden?"
+  }
+  {
+    id: 2,
+    question: "Will I be sharing your home with children?"
+  }
+  {
+    id: 3,
+    question: "How much training can you commit to?"
+  }
+  {
+    id: 4,
+    question: "How often will I be left home alone?"
+  }
+  {
+    id: 5,
+    question: "What's your activity level?"
+  }
+]
+
 const info = animal => {
   return (
     <div>
