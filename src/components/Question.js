@@ -13,4 +13,4 @@ Question.propTypes = {
 
 export default Question;
 
-// Questions can come from an array or use conditional rendering to decide
+// Questions can come from an array or use conditional rendering
