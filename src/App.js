@@ -3,21 +3,33 @@ import logo from './logo.svg';
 import './App.css';
 import Banner from './Banner';
 import PetCard from './PetCard';
-import { library } from '@fortawesome/fontawesome-svg-core'; 
-import { faHeart, faUser} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHeart, faUser);
+const animals = [
+  {
+    name: 'Special',
+    description: "Special lives up to his name because he truly is a special boy! He's a very gentle soul with a lovely nature"
+  },
+  {
+    name: 'Ozzie',
+    description: "This gorgeous lad is a little wary at first, but when comfortable he loves a fuss and cuddle."
+  },
+  {
+    name: 'Pepper',
+    description: "Shay is now looking for a loving new home with a group of ladies he can call his own and look after."
+  }
+];
 
-function App() {
-
-  return (
-    <div className="App">
-      <Banner />
-      <div className="container">
-        <PetCard />
+class App extends React.Component {
+  render () {
+    return (
+      <div className="App">
+        <Banner />
+        <div className="container">
+          <PetCard pets={animals}/>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

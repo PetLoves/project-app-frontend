@@ -1,7 +1,6 @@
 import React from 'react';
 import './Banner.css';
 import githeart from './images/githeart.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Banner extends React.Component {
     render() {
@@ -14,16 +13,10 @@ class Banner extends React.Component {
             <h1>PetLovers</h1>
           </div>
           <div className="col-1">
-            <FontAwesomeIcon
-              icon="heart"
-              size = "3x" 
-            />
+                HEART
           </div>
           <div className="col-1">
-            <FontAwesomeIcon
-              icon="user"
-              size = "3x"
-            />
+                USER
           </div>
         </div>
       );
