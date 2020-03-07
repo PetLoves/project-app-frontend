@@ -1,43 +1,23 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
+import Banner from './Banner';
+import PetCard from './PetCard';
+import { library } from '@fortawesome/fontawesome-svg-core'; 
+import { faHeart, faUser} from '@fortawesome/free-solid-svg-icons';
 
-const animals = [
-  {
-    id: 1,
-    name: 'Louis',
-    species: 'dog'
-    // breed: ,
-    // colour: ,
-    // sex: female,
-    // companionship: 5,
-    // child_friendly: ,
-    // animal_friendly: ,
-    // garden_required:
-  },
-  {
-    id: 2,
-    name: 'Ozzie',
-    species: 'dog'
-  },
-  {
-    id: 3,
-    name: 'Pepper',
-    species: 'dog'
-  }
-];
+library.add(faHeart, faUser);
 
-const info = animal => {
+function App() {
+
   return (
-    <div>
-      {animal.name}: {animal.species}
-      {/* <p>{animal.species}</p> */}
+    <div className="App">
+      <Banner />
+      <div className="container">
+        <PetCard />
+      </div>
     </div>
   );
-};
-class App extends React.Component {
-  render() {
-    return <div>{animals.map(info)}</div>;
-  }
 }
 
 export default App;
