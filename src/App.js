@@ -49,6 +49,38 @@ const questions = [
   }
 ]
 
+const answers = [
+  {
+    id: 1,
+    answer0: "Yes",
+    answer1: "No" 
+  }
+  {
+    id: 2,
+    answer0: "Yes",
+    answer1: "No"
+  }
+  {
+    id: 3,
+    answer0: "I'm willing to tackle behavioral issues such as anxiety and leash aggression",
+    answer1: "Some house-training and basic commands are fine",
+    answer2: "I'd prefer to not bother with training"
+  }
+  {
+    id: 4,
+    answer0: "0-10 hours per week",
+    answer1: "10-25 hours per week",
+    answer2: "25-40 hours per week"
+  }
+  {
+    id: 5,
+    answer0: "I go running most days and hiking at the weekend",
+    answer1: "Daily walks around 2-4 miles are great",
+    answer2: "I like to potter around in the garden or occassionally go for a walk",
+    answer3: "I prefer or am unable to leave the house much."
+  }
+]
+
 const info = animal => {
   return (
     <div>
