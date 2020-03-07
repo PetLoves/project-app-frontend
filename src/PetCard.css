@@ -1,0 +1,24 @@
+.PetCard {
+    padding: 0px;
+    margin: 0px;
+}
+
+.card {
+    margin-top: 3em;
+}
+
+.card {
+    border-color:#c7135c;
+}
+.col-md-4 {
+    border: none;
+}
+
+.card-title {
+    color: #c7135c;
+}
+
+.btn {
+    background-color: #c7135c;
+    border: #c7135c;
+}

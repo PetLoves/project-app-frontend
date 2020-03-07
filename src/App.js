@@ -1,29 +1,21 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Question from './components/Question';
+import Banner from './Banner';
+import PetCard from './PetCard';
 
 const animals = [
   {
-    id: 1,
-    name: 'Louis',
-    species: 'dog'
-    // breed: ,
-    // colour: ,
-    // sex: female,
-    // companionship: 5,
-    // child_friendly: ,
-    // animal_friendly: ,
-    // garden_required:
+    name: 'Special',
+    description: "Special lives up to his name because he truly is a special boy! He's a very gentle soul with a lovely nature"
   },
   {
-    id: 2,
     name: 'Ozzie',
-    species: 'dog'
+    description: "This gorgeous lad is a little wary at first, but when comfortable he loves a fuss and cuddle."
   },
   {
-    id: 3,
     name: 'Pepper',
-    species: 'dog'
+    description: "Shay is now looking for a loving new home with a group of ladies he can call his own and look after."
   }
 ];
 
@@ -77,9 +69,17 @@ const info = animal => {
     </div>
   );
 };
+
 class App extends React.Component {
-  render() {
-    return <div>{animals.map(info)}</div>;
+  render () {
+    return (
+      <div className="App">
+        <Banner />
+        <div className="container">
+          <PetCard pets={animals}/>
+        </div>
+      </div>
+    );
   }
 }
 
