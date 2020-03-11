@@ -3,6 +3,7 @@ import './PetCard.css';
 import Card from './Card.js';
 
 class PetCard extends React.Component {
+
   render() {
     console.log(this.props.pets);
 

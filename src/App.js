@@ -26,6 +26,21 @@ class App extends React.Component {
     showResult: false
   };
 
+  showResult() {
+    this.setState(prevState => ({ showResult: !prevState.showResult }));
+
+    // is the same as:
+    //   if (this.state.showResult) {
+    //     this.setState({
+    //       showResult: false
+    //     });
+    //   } else {
+    //     this.setState({
+    //       showResult: true
+    //     });
+    //   }
+  }
+
   info = animal => {
     return (
       <div>
@@ -40,7 +55,7 @@ class App extends React.Component {
       <div className="App">
         <Banner />
         <div className="container">
-          <PetCard pets={this.state.animals} />
+          {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
         </div>
       </div>
     );
