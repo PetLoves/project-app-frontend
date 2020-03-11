@@ -4,6 +4,8 @@ import './App.css';
 import Banner from './Banner';
 import PetCard from './PetCard';
 import questions from './questions';
+import axios from 'axios';
+
 class App extends React.Component {
   state = {
     animals: [
@@ -49,6 +51,18 @@ class App extends React.Component {
       </div>
     );
   };
+
+  componentDidMount = () => {
+    axios.get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets')
+    .then((response) => {
+      this.setState({
+        animals: response.data.petloves
+      })
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  }
 
   render() {
     return (
