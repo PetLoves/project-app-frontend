@@ -13,7 +13,7 @@ class Card extends React.Component {
             <div class="card-body">
                 <h4 class="card-title">{this.props.name}</h4>
                 <p class="card-text">{this.props.description}</p>
-                <a href="#" class="btn btn-light">Learn more</a>
+                <a href="PetDetails.html" class="btn btn-light">Learn more</a>
             </div>
         </div>
         </div>
