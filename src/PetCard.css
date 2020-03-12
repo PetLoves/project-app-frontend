@@ -4,13 +4,9 @@
 }
 
 .card {
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
-
-.card {
     border-radius: 40px;
     border: none;
+    margin: 10px 5px 5px 0px;
 }
 .col-md-4 {
     border: none;
