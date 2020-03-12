@@ -6,7 +6,7 @@
 .card {
     border-radius: 40px;
     border: none;
-    background-color: cornsilk;
+    background-color: rgb(233, 204, 216);
     margin-right: 0px;
 }
 .col-md-4 {
@@ -14,11 +14,11 @@
 }
 
 .card-title {
-    color: #c7135c;
+    color: #6e535e;
 }
 
 .btn {
-    background-color: #c0366d;
+    background-color: #b95c9d;
     border: #c7135c;
     box-shadow: 1px 1px 5px 0px #000000;
 }
