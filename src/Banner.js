@@ -9,11 +9,11 @@ class Banner extends React.Component {
         <div className="col-1">
           <img src={githeart} />
         </div>
-        <div className="col-9">
+        <div className="appName col-9">
           <h1>PetLoves</h1>
         </div>
-        <div className="col-1">HEART</div>
-        <div className="col-1">USER</div>
+        <div className="col-1"><img src="https://img.icons8.com/cotton/64/000000/like--v1.png"/></div>
+        <div className="col-1"><img src="https://img.icons8.com/material-outlined/48/000000/user--v1.png"/></div>
       </div>
     );
   }

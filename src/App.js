@@ -25,7 +25,7 @@ class App extends React.Component {
           'Shay is now looking for a loving new home with a group of ladies he can call his own and look after.'
       }
     ],
-    showResult: false
+    showResult: true
   };
 
   showResult() {
