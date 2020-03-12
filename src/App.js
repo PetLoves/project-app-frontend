@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Banner from './Banner';
 import PetCard from './PetCard';
-import questions from './questions';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -66,10 +64,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Banner />
         <div className="container">
-          {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
+          <div className="App">
+            <Banner />
+            {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
         </div>
       </div>
     );

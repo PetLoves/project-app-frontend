@@ -1,24 +1,29 @@
-.PetCard {
+.petCard {
     padding: 0px;
     margin: 0px;
 }
 
 .card {
-    margin-top: 3em;
-}
-
-.card {
-    border-color:#c7135c;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(253, 229, 253);
+    margin-bottom: 5px;
 }
 .col-md-4 {
     border: none;
 }
 
 .card-title {
-    color: #c7135c;
+    color: #b8225b;
 }
 
 .btn {
-    background-color: #c7135c;
+    background-color: #b95c9d;
     border: #c7135c;
+    box-shadow: 1px 1px 5px 0px #000000;
+}
+
+.card-img-top {
+    border-radius: 40px;
+    margin-top: 15px;
 }
