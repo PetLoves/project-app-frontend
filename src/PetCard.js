@@ -8,7 +8,7 @@ class PetCard extends React.Component {
     console.log(this.props.pets);
 
     return (
-      <div className="row" id="petCard">
+      <div className="row petCard">
         {this.props.pets.map(animal => {
           return <Card name={animal.name} description={animal.description} img={animal.image_path}/>;
         })}
