@@ -1,22 +1,11 @@
 .App {
   text-align: center;
 }
-/*
-.App-logo {
-  height: 100vmin;
-  pointer-events: none;
-} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -29,7 +18,7 @@
 }
 
 .container {
-  background-color: rgb(225, 203, 247);
+  background-color: rgb(240, 225, 255);
 }
 
 .appName {

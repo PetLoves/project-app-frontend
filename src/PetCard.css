@@ -6,15 +6,15 @@
 .card {
     border-radius: 40px;
     border: none;
-    background-color: rgb(233, 204, 216);
-    margin-right: 0px;
+    background-color: rgb(253, 229, 253);
+    margin-bottom: 5px;
 }
 .col-md-4 {
     border: none;
 }
 
 .card-title {
-    color: #6e535e;
+    color: #b8225b;
 }
 
 .btn {
