@@ -6,7 +6,8 @@
 .card {
     border-radius: 40px;
     border: none;
-    margin: 10px 5px 5px 0px;
+    background-color: cornsilk;
+    margin-right: 0px;
 }
 .col-md-4 {
     border: none;
@@ -17,10 +18,12 @@
 }
 
 .btn {
-    background-color: #c7135c;
+    background-color: #c0366d;
     border: #c7135c;
+    box-shadow: 1px 1px 5px 0px #000000;
 }
 
 .card-img-top {
     border-radius: 40px;
+    margin-top: 15px;
 }
