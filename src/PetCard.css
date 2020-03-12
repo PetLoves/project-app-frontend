@@ -1,14 +1,16 @@
-.PetCard {
+.petCard {
     padding: 0px;
     margin: 0px;
 }
 
 .card {
-    margin-top: 3em;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 .card {
-    border-color:#c7135c;
+    border-radius: 40px;
+    border: none;
 }
 .col-md-4 {
     border: none;
@@ -21,4 +23,8 @@
 .btn {
     background-color: #c7135c;
     border: #c7135c;
+}
+
+.card-img-top {
+    border-radius: 40px;
 }
