@@ -87,28 +87,48 @@ class QuizQuestion extends React.Component {
           </div>
         </fieldset>
 
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value=""
-            id="defaultCheck1"
-          />
+        <div className="row">
+
           <label className="form-check-label" for="defaultCheck1">
             Do you have a garden for me to roam free?
           </label>
-        </div>
-        <div className="form-check">
-          <input
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value="1"
+              id="defaultCheck1"
+            />
+            <input
             className="form-check-input"
             type="checkbox"
-            value=""
+            value="0"
             id="defaultCheck2"
           />
-          <label className="form-check-label" for="defaultCheck2">
-            Do you have young children?
-          </label>
+          </div>
         </div>
+
+        <div className="row">
+
+          <label className="form-check-label" for="defaultCheck1">
+            Do you have a garden for me to roam free?
+          </label>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value="1"
+              id="defaultCheck1"
+            />
+            <input
+            className="form-check-input"
+            type="checkbox"
+            value="0"
+            id="defaultCheck2"
+          />
+          </div>
+        </div>
+        
         <div className="headspace">
           <label for="customRange2">How active can you be with me?</label>
           <input
