@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './components/Button.js'
 import blue from './images/blue.jpeg';
 
 class Card extends React.Component {
@@ -14,7 +13,7 @@ class Card extends React.Component {
             <div class="card-body">
                 <h4 class="card-title">{this.props.name}</h4>
                 <p class="card-text">{this.props.description}</p>
-                <Button>Learn more</Button>
+                {/*Button goes here */}
             </div>
         </div>
         </div>
