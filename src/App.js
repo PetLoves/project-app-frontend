@@ -3,6 +3,7 @@ import './App.css';
 import Banner from './Banner';
 import PetCard from './PetCard';
 import QuizQuestion from './QuizQuestion';
+import Footer from './Footer.js'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -71,6 +72,7 @@ class App extends React.Component {
           <Banner />
           <QuizQuestion />
           {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
+          <Footer />
         </div>
       </div>
     );
