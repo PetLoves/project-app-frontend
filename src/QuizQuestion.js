@@ -88,57 +88,66 @@ class QuizQuestion extends React.Component {
         </fieldset>
 
         <div className="row">
-          <div className="col-6">
-            <label className="form-check-label" for="defaultCheck1">
-              Do you have a garden for me to roam free?
-            </label>
-          </div>
-          <div className="row">
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value="1"
-                  id="garden1"
-                />
-                <label for="garden1">Yes</label>
-              </div>
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value="0"
-                  id="garden2"
-                />
-                <label for="garden2">No</label>
-              </div>
-            </div>
-
-        <div className="row">
-          <div className="col-6">
-            <p>Do you have any children?</p>
-          </div>
           <label className="form-check-label" for="defaultCheck1">
-          </label>
+            Do you have a garden for me to roam free?
+            </label>
+        </div>
+        <div className="row">
           <div className="form-check">
             <input
               className="form-check-input"
               type="checkbox"
-              value="0"
-              id="defaultCheck2"
+              value="1"
+              id="garden1"
             />
+            <label for="garden1">Yes</label>
           </div>
+          <input
+            className="form-check-input"
+            type="checkbox"
+            value="0"
+            id="garden2"
+          />
+          <label for="garden2">No</label>
         </div>
 
+        <div className="row">
+          <label className="form-check-label" for="defaultCheck1">
+            Do you have any children?
+            </label>
+        </div>
+        <div className="row">
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value="1"
+              id="children1"
+            />
+            <label for="children1">Yes</label>
+          </div>
+          <input
+            className="form-check-input"
+            type="checkbox"
+            value="0"
+            id="children2"
+          />
+          <label for="children2">No</label>
+        </div>
+
+       
+
         <div className="headspace">
-          <label for="customRange2">How active can you be with me?</label>
+          <label for="customRange2">What's your activity level?</label>
           <input
             type="range"
             class="custom-range"
             min="1 "
-            max="4"
+            max="3"
             id="custom</input>Range2"
           />
         </div>
+
         <div className="form-group row">
           <div className="col-sm-10">
             <button type="submit" className="btn btn-primary pet-button">
