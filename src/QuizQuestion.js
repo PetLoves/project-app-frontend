@@ -135,17 +135,22 @@ class QuizQuestion extends React.Component {
           <label for="children2">No</label>
         </div>
 
-       
 
-        <div className="headspace">
-          <label for="customRange2">What's your activity level?</label>
+        <div className="row">
+          <label for="activityLevel">What's your activity level?</label>
           <input
             type="range"
             class="custom-range"
             min="1 "
-            max="3"
-            id="custom</input>Range2"
+            max="4"
+            id="custom"
           />
+          <div class="rangeWrapper">
+            <p class="rangeLabel selected">Don't leave the house</p>
+            <p class="rangeLabel">Pottering in the garden</p>
+            <p class="rangeLabel">Daily walks</p>
+            <p class="rangeLabel">Running and hiking</p>
+          </div>
         </div>
 
         <div className="form-group row">
