@@ -1,5 +1,17 @@
+h1 {
+  font-weight: bolder;
+}
+
 .App {
   text-align: center;
+}
+
+.container-fluid {
+  /* background-color: rgb(240, 225, 255); */
+}
+
+.appName {
+  font-family: 'Caveat', cursive;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,16 +27,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.container {
-  background-color: rgb(240, 225, 255);
-}
-
-.appName {
-  font-family: 'Caveat', cursive;
-}
-
-h1 {
-  font-weight: bolder;
 }
