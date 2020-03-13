@@ -7,7 +7,12 @@ h1 {
 }
 
 .container-fluid {
-  /* background-color: rgb(240, 225, 255); */
+
+}
+
+.footer {
+  position: relative;
+  background-repeat: no-repeat;
 }
 
 .appName {
