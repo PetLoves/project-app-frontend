@@ -1,7 +1,36 @@
+h1 {
+  font-weight: bolder;
+}
+
 .App {
   text-align: center;
 }
 
+.container-fluid {
+  /* background-color: rgb(240, 225, 255); */
+}
+
+.appName {
+  font-family: 'Caveat', cursive;
+}
+
+.form-style {
+  text-align: left;
+  width: 70%;
+  display: inline-block;
+}
+
+.move-input {
+  padding-left: 0;
+}
+
+.pet-button {
+  margin: 2%;
+}
+
+.headspace {
+  margin-top: 2%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,16 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.container {
-  background-color: rgb(240, 225, 255);
-}
-
-.appName {
-  font-family: 'Caveat', cursive;
-}
-
-h1 {
-  font-weight: bolder;
 }
