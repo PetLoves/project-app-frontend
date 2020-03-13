@@ -1,6 +1,6 @@
 import React from 'react';
 import './PetCard.css';
-import Card from './components/Card.js/index.js';
+import Card from './Card.js';
 
 class PetCard extends React.Component {
 
