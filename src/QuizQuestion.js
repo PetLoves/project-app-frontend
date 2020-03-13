@@ -88,57 +88,71 @@ class QuizQuestion extends React.Component {
         </fieldset>
 
         <div className="row">
-
           <label className="form-check-label" for="defaultCheck1">
             Do you have a garden for me to roam free?
-          </label>
+            </label>
+        </div>
+        <div className="row">
           <div className="form-check">
             <input
               className="form-check-input"
               type="checkbox"
               value="1"
-              id="defaultCheck1"
+              id="garden1"
             />
-            <input
+            <label for="garden1">Yes</label>
+          </div>
+          <input
             className="form-check-input"
             type="checkbox"
             value="0"
-            id="defaultCheck2"
+            id="garden2"
           />
-          </div>
+          <label for="garden2">No</label>
         </div>
 
         <div className="row">
-
           <label className="form-check-label" for="defaultCheck1">
-            Do you have a garden for me to roam free?
-          </label>
+            Do you have any children?
+            </label>
+        </div>
+        <div className="row">
           <div className="form-check">
             <input
               className="form-check-input"
               type="checkbox"
               value="1"
-              id="defaultCheck1"
+              id="children1"
             />
-            <input
+            <label for="children1">Yes</label>
+          </div>
+          <input
             className="form-check-input"
             type="checkbox"
             value="0"
-            id="defaultCheck2"
+            id="children2"
           />
-          </div>
+          <label for="children2">No</label>
         </div>
-        
-        <div className="headspace">
-          <label for="customRange2">How active can you be with me?</label>
+
+
+        <div className="row">
+          <label for="activityLevel">What's your activity level?</label>
           <input
             type="range"
             class="custom-range"
             min="1 "
             max="4"
-            id="custom</input>Range2"
+            id="custom"
           />
+          <div class="rangeWrapper">
+            <p class="rangeLabel selected">Don't leave the house</p>
+            <p class="rangeLabel">Pottering in the garden</p>
+            <p class="rangeLabel">Daily walks</p>
+            <p class="rangeLabel">Running and hiking</p>
+          </div>
         </div>
+
         <div className="form-group row">
           <div className="col-sm-10">
             <button type="submit" className="btn btn-primary pet-button">
