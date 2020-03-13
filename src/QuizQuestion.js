@@ -88,47 +88,47 @@ class QuizQuestion extends React.Component {
         </fieldset>
 
         <div className="row">
-
-          <label className="form-check-label" for="defaultCheck1">
-            Do you have a garden for me to roam free?
-          </label>
-          <div className="form-check">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              value="1"
-              id="defaultCheck1"
-            />
-            <input
-            className="form-check-input"
-            type="checkbox"
-            value="0"
-            id="defaultCheck2"
-          />
+          <div className="col-6">
+            <label className="form-check-label" for="defaultCheck1">
+              Do you have a garden for me to roam free?
+            </label>
           </div>
-        </div>
+          <div className="row">
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  value="1"
+                  id="garden1"
+                />
+                <label for="garden1">Yes</label>
+              </div>
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  value="0"
+                  id="garden2"
+                />
+                <label for="garden2">No</label>
+              </div>
+            </div>
 
         <div className="row">
-
+          <div className="col-6">
+            <p>Do you have any children?</p>
+          </div>
           <label className="form-check-label" for="defaultCheck1">
-            Do you have a garden for me to roam free?
           </label>
           <div className="form-check">
             <input
               className="form-check-input"
               type="checkbox"
-              value="1"
-              id="defaultCheck1"
+              value="0"
+              id="defaultCheck2"
             />
-            <input
-            className="form-check-input"
-            type="checkbox"
-            value="0"
-            id="defaultCheck2"
-          />
           </div>
         </div>
-        
+
         <div className="headspace">
           <label for="customRange2">How active can you be with me?</label>
           <input
