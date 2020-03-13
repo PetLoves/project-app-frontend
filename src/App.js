@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Banner from './Banner';
+import Banner from './components/Banner';
 import PetCard from './PetCard';
 import QuizQuestion from './QuizQuestion';
 import axios from 'axios';
