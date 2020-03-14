@@ -15,7 +15,7 @@ class Banner extends React.Component {
           <a href="#">
             <img
               src="https://img.icons8.com/cotton/64/000000/like--v1.png"
-              class="img-responsive"
+              className="img-responsive"
               id="heart"
               alt=""
             />

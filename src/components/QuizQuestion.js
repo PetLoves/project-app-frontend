@@ -5,24 +5,22 @@ class QuizQuestion extends React.Component {
     hasGarden: 0
   };
 
-  submitFunc = (event) => {
-    this.props.findPetFunc(this.state.hasGarden)
-  }
+  submitFunc = event => {
+    this.props.findPetFunc(this.state.hasGarden);
+  };
 
-  hasGardenFunc = (event) => {
+  hasGardenFunc = event => {
     this.setState({
       hasGarden: event.target.value
-    })
-    console.log(
-      `test: ${event.target.value}`
-    );
+    });
+    console.log(`test: ${event.target.value}`);
   };
 
   render() {
     return (
       <form className="form-style">
         <div className="form-group">
-          <label for="formGroupExampleInput" className="col-form-label-lg">
+          <label htmlFor="formGroupExampleInput" className="col-form-label-lg">
             What's your name?
           </label>
 
@@ -65,7 +63,7 @@ class QuizQuestion extends React.Component {
                   value="1"
                   onClick={this.hasGardenFunc}
                 />
-                <label className="form-check-label" for="gridRadios1">
+                <label className="form-check-label" htmlFor="gridRadios1">
                   Yes
                 </label>
               </div>
@@ -79,7 +77,7 @@ class QuizQuestion extends React.Component {
                   value="0"
                   onClick={this.hasGardenFunc}
                 />
-                <label className="form-check-label" for="gridRadios2">
+                <label className="form-check-label" htmlFor="gridRadios2">
                   No
                 </label>
               </div>
@@ -172,20 +170,20 @@ class QuizQuestion extends React.Component {
         </div> */}
 
         <div className="row">
-          <label for="activityLevel">What's your activity level?</label>
+          <label htmlFor="activityLevel">What's your activity level?</label>
           <input
             type="range"
-            class="custom-range"
+            className="custom-range"
             min="1"
             max="4"
             step="1"
             id="custom"
           />
-          <div class="rangeWrapper">
-            <p class="rangeLabel selected">Don't leave the house</p>
-            <p class="rangeLabel">Pottering in the garden</p>
-            <p class="rangeLabel">Daily walks</p>
-            <p class="rangeLabel">Running and hiking</p>
+          <div className="rangeWrapper">
+            <p className="rangeLabel selected">Don't leave the house</p>
+            <p className="rangeLabel">Pottering in the garden</p>
+            <p className="rangeLabel">Daily walks</p>
+            <p className="rangeLabel">Running and hiking</p>
           </div>
         </div>
 
