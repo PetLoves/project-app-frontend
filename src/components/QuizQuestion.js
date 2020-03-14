@@ -2,26 +2,21 @@ import React from 'react';
 
 class QuizQuestion extends React.Component {
   state = {
-    hasGarden: true
-    // numberOfGuests: 2
+    hasGarden: 0
   };
 
-  handleInputChange = event => {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
+  submitFunc = (event) => {
+    this.props.findPetFunc(this.state.hasGarden)
+  }
 
+  hasGardenFunc = (event) => {
     this.setState({
-      [name]: value
-    });
+      hasGarden: event.target.value
+    })
+    console.log(
+      `test: ${event.target.value}`
+    );
   };
-
-  findPet = () => {
-    this.props.findPetFunc(this.state.hasGarden);
-  };
-
-  // Checkboxes are for selecting one or several options in a list
-  // radios are for selecting one option from many
 
   render() {
     return (
@@ -57,21 +52,21 @@ class QuizQuestion extends React.Component {
         {/* Radio Buttons */}
         <fieldset className="form-group">
           <div className="row">
-            <legend className="col-form-label col-sm-2 pt-0">
-              Radios are for selecting one option from many
+            <legend className="col-form-label col-sm-6 pt-0">
+              Do you have a garden?
             </legend>
-            <div className="col-sm-10">
+            <div className="col-sm-6">
               <div className="form-check">
                 <input
                   className="form-check-input"
                   type="radio"
                   name="gridRadios"
                   id="gridRadios1"
-                  value="option1"
-                  checked
+                  value="1"
+                  onClick={this.hasGardenFunc}
                 />
                 <label className="form-check-label" for="gridRadios1">
-                  First radio
+                  Yes
                 </label>
               </div>
 
@@ -81,22 +76,23 @@ class QuizQuestion extends React.Component {
                   type="radio"
                   name="gridRadios"
                   id="gridRadios2"
-                  value="option2"
+                  value="0"
+                  onClick={this.hasGardenFunc}
                 />
                 <label className="form-check-label" for="gridRadios2">
-                  Second radio
+                  No
                 </label>
               </div>
             </div>
           </div>
         </fieldset>
 
-        <fieldset className="form-group">
+        {/* <fieldset className="form-group">
           <div className="row">
-            <legend className="col-form-label col-sm-2 pt-0">
-              Radios are for selecting one option from many
+            <legend className="col-form-label col-sm-6 pt-0">
+              Do you have children?
             </legend>
-            <div className="col-sm-10">
+            <div className="col-sm-6">
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -107,7 +103,7 @@ class QuizQuestion extends React.Component {
                   checked
                 />
                 <label className="form-check-label" for="gridRadios1">
-                  First radio
+                  Yes
                 </label>
               </div>
 
@@ -120,12 +116,12 @@ class QuizQuestion extends React.Component {
                   value="option2"
                 />
                 <label className="form-check-label" for="gridRadios2">
-                  Second radio
+                  No
                 </label>
               </div>
             </div>
           </div>
-        </fieldset>
+        </fieldset> */}
 
         {/* <div className="row">
           <label className="form-check-label" for="defaultCheck1">
@@ -198,7 +194,7 @@ class QuizQuestion extends React.Component {
             <button
               type="submit"
               className="btn btn-primary pet-button"
-              onClick={this.findPet}
+              onClick={this.submitFunc}
             >
               Find your Pet Love
             </button>
