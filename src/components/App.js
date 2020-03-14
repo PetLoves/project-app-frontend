@@ -8,7 +8,8 @@ import axios from 'axios';
 class App extends React.Component {
   state = {
     animals: [],
-    showResult: false
+    showResult: true,
+    answers: []
   };
 
   componentDidMount = () => {
