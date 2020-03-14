@@ -16,6 +16,10 @@ class QuizQuestion extends React.Component {
     });
   };
 
+  findPet = () => {
+    this.props.findPetFunc(this.state.hasGarden);
+  };
+
   // Checkboxes are for selecting one or several options in a list
   // radios are for selecting one option from many
 
@@ -140,8 +144,9 @@ class QuizQuestion extends React.Component {
           <input
             type="range"
             class="custom-range"
-            min="1 "
-            max="3"
+            min="1"
+            max="4"
+            step="1"
             id="custom"
           />
           <div class="rangeWrapper">
@@ -154,7 +159,11 @@ class QuizQuestion extends React.Component {
 
         <div className="form-group row">
           <div className="col-sm-10">
-            <button type="submit" className="btn btn-primary pet-button">
+            <button
+              type="submit"
+              className="btn btn-primary pet-button"
+              onClick={this.findPet}
+            >
               Find your Pet Love
             </button>
           </div>
