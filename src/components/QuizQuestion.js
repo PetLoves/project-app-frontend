@@ -55,7 +55,7 @@ class QuizQuestion extends React.Component {
         </div> */}
 
         {/* Radio Buttons */}
-        {/* <fieldset className="form-group">
+        <fieldset className="form-group">
           <div className="row">
             <legend className="col-form-label col-sm-2 pt-0">
               Radios are for selecting one option from many
@@ -89,9 +89,45 @@ class QuizQuestion extends React.Component {
               </div>
             </div>
           </div>
-        </fieldset> */}
+        </fieldset>
 
-        <div className="row">
+        <fieldset className="form-group">
+          <div className="row">
+            <legend className="col-form-label col-sm-2 pt-0">
+              Radios are for selecting one option from many
+            </legend>
+            <div className="col-sm-10">
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="gridRadios1"
+                  value="option1"
+                  checked
+                />
+                <label className="form-check-label" for="gridRadios1">
+                  First radio
+                </label>
+              </div>
+
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="gridRadios2"
+                  value="option2"
+                />
+                <label className="form-check-label" for="gridRadios2">
+                  Second radio
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        {/* <div className="row">
           <label className="form-check-label" for="defaultCheck1">
             Do you have a garden for me to roam free?
           </label>
@@ -137,7 +173,7 @@ class QuizQuestion extends React.Component {
             id="children2"
           />
           <label for="children2">No</label>
-        </div>
+        </div> */}
 
         <div className="row">
           <label for="activityLevel">What's your activity level?</label>
