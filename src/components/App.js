@@ -100,7 +100,7 @@ class App extends React.Component {
             />
           ) : null}
           {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
-          <Footer />
+          <Footer className="footer-img" />
         </div>
       </div>
     );
