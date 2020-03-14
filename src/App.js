@@ -64,12 +64,17 @@ class App extends React.Component {
     );
   };
 
+  findPet = (answer) => {
+    //alert pulling in state from QuizQuestion
+    alert("I have a garden is " + answer)
+  };
+
   render() {
     return (
       <div className="container-fluid">
         <div className="App">
           <Banner />
-          <QuizQuestion />
+          <QuizQuestion findPetFunc={this.findPet}/>
           {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
         </div>
       </div>
