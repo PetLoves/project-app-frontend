@@ -58,8 +58,8 @@ class QuizQuestion extends React.Component {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="gridRadios"
-                  id="gridRadios1"
+                  name="hasGarden"
+                  id="gridRadios"
                   value="1"
                   onClick={this.hasGardenFunc}
                 />
@@ -72,7 +72,7 @@ class QuizQuestion extends React.Component {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="gridRadios"
+                  name="hasGarden"
                   id="gridRadios2"
                   value="0"
                   onClick={this.hasGardenFunc}
@@ -204,29 +204,3 @@ class QuizQuestion extends React.Component {
 }
 
 export default QuizQuestion;
-
-{
-  /* <div className="container">
-   <form>
-    <label>
-      <input
-        name="isGoing"
-        type="checkbox"
-        checked={this.state.hasGarden}
-        onChange={this.handleInputChange}
-      />
-      <span> Do you have a garden?</span>
-    </label>
-    <br />
-          <label>
-            Numeric Value Question:
-            <input
-              name="numberOfGuests"
-              type="number"
-              value={this.state.numberOfGuests}
-              onChange={this.handleInputChange}
-            />
-          </label>
-  </form>
-</div>  */
-}
