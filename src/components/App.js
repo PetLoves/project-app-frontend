@@ -8,7 +8,7 @@ import axios from 'axios';
 class App extends React.Component {
   state = {
     animals: [],
-    showResult: false,
+    showResult: true,
     answers: []
   };
 
@@ -50,29 +50,57 @@ class App extends React.Component {
   };
 
   findPet = answer => {
-    var boolAnswer = answer === "1";
+    var boolAnswer = answer === '1';
     const currentAnswers = {
       hasGarden: boolAnswer
-    }
+    };
     const newAnswers = this.state.answers;
-    newAnswers.push(currentAnswers)
+    newAnswers.push(currentAnswers);
     this.setState({
       answers: newAnswers
-    })
-    console.log(JSON.stringify(newAnswers))
+    });
+    console.log(JSON.stringify(newAnswers));
   };
 
-  render() {
+  // findPet = answer => {
+  //   var boolAnswer = answer === '1';
+  //   const currentAnswers = {
+  //     hasGarden: boolAnswer
+  //   };
+  //   const garden = this.state.answers;
+  //   // const newAnswers = this.state.answers;
+  //   axios
+  //     .get(
+  //       `https://ebty5goa66.execute-api.eu-west-2.amazonaws.com/dev/pets/${garden}`
+  //     )
+  //     .then(response => {
+  //       // handle success
+  //       garden.push(currentAnswers);
+  //       this.setState({
+  //         answers: garden
+  //       });
+  //       console.log(`garden: ${JSON.stringify(garden)}`);
+  //       console.log(garden);
+  //     })
+  //     .catch(error => {
+  //       // handle error
+  //       console.error(error);
+  //     });
+  // };
 
+  render() {
     return (
       <div className="container-fluid">
         <div className="App">
           <Banner />
-          {!this.state.showResult ? (
-            <QuizQuestion findPetFunc={this.findPet} hasGarden={this.state.answers.hasGarden} />
+          {this.state.showResult ? (
+            <QuizQuestion
+              findPetFunc={this.findPet}
+              hasGarden={this.state.answers.hasGarden}
+            />
           ) : null}
           {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
-          <Footer />
+          <Footer className="footer-img" />
         </div>
       </div>
     );
