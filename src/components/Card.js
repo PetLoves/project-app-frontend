@@ -1,10 +1,9 @@
 import React from 'react';
-import Button from 'Button.js';
 
-class PetDetails extends React.Component {
+class Card extends React.Component {
   render() {
+    console.log(this.props);
     console.log(this.props.pets);
-
     return (
       <div className="col-md-4 card">
         <div class="card">
@@ -12,7 +11,7 @@ class PetDetails extends React.Component {
           <div class="card-body">
             <h4 class="card-title">{this.props.name}</h4>
             <p class="card-text">{this.props.description}</p>
-            <Button>Learn more</Button>
+            <button onclick="shoot()">Learn more</button>
           </div>
         </div>
       </div>
@@ -20,4 +19,4 @@ class PetDetails extends React.Component {
   }
 }
 
-export default PetDetails;
+export default Card;

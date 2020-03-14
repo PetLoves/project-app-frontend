@@ -1,9 +1,8 @@
 import React from 'react';
-import './App.css';
 import Banner from './Banner';
 import PetCard from './PetCard';
 import QuizQuestion from './QuizQuestion';
-import Footer from './Footer.js'
+import Footer from './Footer.js';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -70,7 +69,8 @@ class App extends React.Component {
       <div className="container-fluid">
         <div className="App">
           <Banner />
-          <QuizQuestion />
+
+          {!this.state.showResult ? <QuizQuestion /> : null}
           {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
           <Footer />
         </div>

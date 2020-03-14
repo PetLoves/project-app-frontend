@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 class QuizQuestion extends React.Component {
   state = {
@@ -51,7 +50,8 @@ class QuizQuestion extends React.Component {
           </div>
         </div> */}
 
-        <fieldset className="form-group">
+        {/* Radio Buttons */}
+        {/* <fieldset className="form-group">
           <div className="row">
             <legend className="col-form-label col-sm-2 pt-0">
               Radios are for selecting one option from many
@@ -85,12 +85,12 @@ class QuizQuestion extends React.Component {
               </div>
             </div>
           </div>
-        </fieldset>
+        </fieldset> */}
 
         <div className="row">
           <label className="form-check-label" for="defaultCheck1">
             Do you have a garden for me to roam free?
-            </label>
+          </label>
         </div>
         <div className="row">
           <div className="form-check">
@@ -114,7 +114,7 @@ class QuizQuestion extends React.Component {
         <div className="row">
           <label className="form-check-label" for="defaultCheck1">
             Do you have any children?
-            </label>
+          </label>
         </div>
         <div className="row">
           <div className="form-check">
@@ -135,14 +135,13 @@ class QuizQuestion extends React.Component {
           <label for="children2">No</label>
         </div>
 
-
         <div className="row">
           <label for="activityLevel">What's your activity level?</label>
           <input
             type="range"
             class="custom-range"
             min="1 "
-            max="4"
+            max="3"
             id="custom"
           />
           <div class="rangeWrapper">
