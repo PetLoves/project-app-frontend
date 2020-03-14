@@ -8,7 +8,7 @@ import axios from 'axios';
 class App extends React.Component {
   state = {
     animals: [],
-    showResult: true,
+    showResult: false,
     answers: []
   };
 
