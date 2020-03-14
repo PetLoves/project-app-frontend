@@ -7,24 +7,9 @@ import axios from 'axios';
 
 class App extends React.Component {
   state = {
-    animals: [
-      {
-        name: 'Special',
-        description:
-          "Special lives up to his name because he truly is a special boy! He's a very gentle soul with a lovely nature"
-      },
-      {
-        name: 'Ozzie',
-        description:
-          'This gorgeous lad is a little wary at first, but when comfortable he loves a fuss and cuddle.'
-      },
-      {
-        name: 'Pepper',
-        description:
-          'Shay is now looking for a loving new home with a group of ladies he can call his own and look after.'
-      }
-    ],
-    showResult: false
+    animals: [],
+    showResult: true,
+    answers: []
   };
 
   componentDidMount = () => {
