@@ -50,8 +50,9 @@ class App extends React.Component {
   };
 
   findPet = answer => {
+    var boolAnswer = answer === "1";
     const currentAnswers = {
-      hasGarden: answer
+      hasGarden: boolAnswer
     }
     const newAnswers = this.state.answers;
     newAnswers.push(currentAnswers)
