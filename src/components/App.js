@@ -9,42 +9,9 @@ class App extends React.Component {
   state = {
     animals: [],
     showResult: false,
-    answers: []
+    answers: {}
   };
 
-  // componentDidMount = () => {
-  //   axios
-  //     .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets')
-  //     .then(response => {
-  //       this.setState({
-  //         animals: response.data.petloves
-  //       });
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //     });
-  //     console.log(this.state.animals);
-  // };
-  // showResult() {
-  //   this.setState(prevState => ({ showResult: !prevState.showResult }));
-  //   // let urlneeded = 'https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/' + this.state.answers.hasGarden
-  //   // console.log(`URL:  ${urlneeded}`);
-  //   axios
-  //     .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/', {
-  //       params: {
-  //         hasGarden: this.state.answers.hasGarden
-  //       }
-  //     })
-  //     .then(response => {
-  //       this.setState({
-  //         animals: response.data.petloves
-  //       });
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //     });
-  // };
-  
   info = animal => {
     return (
       <div>
@@ -59,19 +26,17 @@ class App extends React.Component {
     const currentAnswers = {
       hasGarden: numAnswer
     };
-    const newAnswers = this.state.answers;
-    newAnswers.push(currentAnswers);
+    //Removed .push as array no longer needed
     this.setState({
-      answers: newAnswers
+      answers: currentAnswers
     });
-    console.log(JSON.stringify(newAnswers));
-    console.log(JSON.stringify(this.state.answers));
+    console.log(this.state.answers);
     axios
       .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
         params: {
-          hasGarden: this.state.answers.hasGarden
-        }
-      })
+          // Don't use this.state as setState is async and will not update this.state 
+          hasGarden: numAnswer
+      }})
       .then(response => {
         this.setState({
           animals: response.data.petloves
@@ -85,34 +50,7 @@ class App extends React.Component {
 
 };
 
-
-  // findPet = answer => {
-  //   var boolAnswer = answer === '1';
-  //   const currentAnswers = {
-  //     hasGarden: boolAnswer
-  //   };
-  //   const garden = this.state.answers;
-  //   // const newAnswers = this.state.answers;
-  //   axios
-  //     .get(
-  //       `https://ebty5goa66.execute-api.eu-west-2.amazonaws.com/dev/pets/${garden}`
-  //     )
-  //     .then(response => {
-  //       // handle success
-  //       garden.push(currentAnswers);
-  //       this.setState({
-  //         answers: garden
-  //       });
-  //       console.log(`garden: ${JSON.stringify(garden)}`);
-  //       console.log(garden);
-  //     })
-  //     .catch(error => {
-  //       // handle error
-  //       console.error(error);
-  //     });
-  // };
-
-  render() {
+render() {
     return (
       <div className="container-fluid">
         <div className="App">
