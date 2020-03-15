@@ -2,11 +2,12 @@ import React from 'react';
 
 class QuizQuestion extends React.Component {
   state = {
-    hasGarden: 0
+    hasGarden: 0,
+    hasChildren: 0
   };
 
   submitFunc = event => {
-    this.props.findPetFunc(this.state.hasGarden);
+    this.props.findPetFunc(this.state.hasGarden, this.state.hasChildren);
     event.preventDefault();
   };
 
