@@ -1,5 +1,9 @@
 import React from 'react';
 
+// submitFunc = event => {
+//   this.props.findPetFunc(this.state.hasGarden);
+// };
+
 class Card extends React.Component {
   render() {
     console.log(this.props);
@@ -11,7 +15,11 @@ class Card extends React.Component {
           <div class="card-body">
             <h4 class="card-title">{this.props.name}</h4>
             <p class="card-text">{this.props.description}</p>
-            <button onclick="shoot()">Learn more</button>
+            <button
+              type="submit"
+              className="btn btn-primary pet-button"
+              // onClick={this.submitFunc}
+            >Learn more</button>
           </div>
         </div>
       </div>
