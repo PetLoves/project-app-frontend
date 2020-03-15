@@ -14,8 +14,15 @@ class QuizQuestion extends React.Component {
     this.setState({
       hasGarden: event.target.value
     });
-    console.log(`test: ${event.target.value}`);
+    console.log(`hasGarden: ${event.target.value}`);
   };
+
+  hasChildFunc = event => {
+    this.setState({
+      hasChildren: event.target.value
+    });
+    console.log(`hasChildren: ${event.target.value}`);
+  }
 
   render() {
     return (
@@ -86,7 +93,7 @@ class QuizQuestion extends React.Component {
           </div>
         </fieldset>
 
-        {/* <fieldset className="form-group">
+        <fieldset className="form-group">
           <div className="row">
             <legend className="col-form-label col-sm-6 pt-0">
               Do you have children?
@@ -96,10 +103,10 @@ class QuizQuestion extends React.Component {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="gridRadios"
+                  name="hasChildren"
                   id="gridRadios1"
-                  value="option1"
-                  checked
+                  value="1"
+                  onClick={this.hasChildFunc}
                 />
                 <label className="form-check-label" for="gridRadios1">
                   Yes
@@ -110,9 +117,10 @@ class QuizQuestion extends React.Component {
                 <input
                   className="form-check-input"
                   type="radio"
-                  name="gridRadios"
+                  name="hasChildren"
                   id="gridRadios2"
-                  value="option2"
+                  value="0"
+                  onClick={this.hasChildFunc}
                 />
                 <label className="form-check-label" for="gridRadios2">
                   No
@@ -120,7 +128,7 @@ class QuizQuestion extends React.Component {
               </div>
             </div>
           </div>
-        </fieldset> */}
+        </fieldset>
 
         {/* <div className="row">
           <label className="form-check-label" for="defaultCheck1">
