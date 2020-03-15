@@ -65,25 +65,24 @@ class App extends React.Component {
       answers: newAnswers
     });
     console.log(JSON.stringify(newAnswers));
-    console.log(this.state.answers);
-    const params = {
-      hasGarden: this.state.answers.hasGarden,
-    };
+    console.log(JSON.stringify(this.state.answers));
     axios
       .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
-        params
+        params: {
+          hasGarden: this.state.answers.hasGarden
+        }
       })
       .then(response => {
         this.setState({
           animals: response.data.petloves
         });
+        console.log(JSON.stringify(this.state.animals));
       })
       .catch(error => {
         console.error(error);
       });
 
-    console.log(this.state.animals);
-    console.log(JSON.stringify(this.state.animals));
+
 };
 
 
