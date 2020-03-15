@@ -12,19 +12,19 @@ class App extends React.Component {
     answers: []
   };
 
-  componentDidMount = () => {
-    axios
-      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets')
-      .then(response => {
-        this.setState({
-          animals: response.data.petloves
-        });
-      })
-      .catch(error => {
-        console.error(error);
-      });
-      console.log(this.state.animals);
-  };
+  // componentDidMount = () => {
+  //   axios
+  //     .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets')
+  //     .then(response => {
+  //       this.setState({
+  //         animals: response.data.petloves
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  //     console.log(this.state.animals);
+  // };
   // showResult() {
   //   this.setState(prevState => ({ showResult: !prevState.showResult }));
   //   // let urlneeded = 'https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/' + this.state.answers.hasGarden
@@ -65,6 +65,7 @@ class App extends React.Component {
       answers: newAnswers
     });
     console.log(JSON.stringify(newAnswers));
+    console.log(this.state.answers);
     axios
       .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/', {
         params: {
@@ -79,6 +80,8 @@ class App extends React.Component {
       .catch(error => {
         console.error(error);
       });
+    console.log(this.state.animals);
+    console.log(JSON.stringify(this.state.animals));
 };
 
 
