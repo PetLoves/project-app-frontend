@@ -7,6 +7,7 @@ class QuizQuestion extends React.Component {
 
   submitFunc = event => {
     this.props.findPetFunc(this.state.hasGarden);
+    event.preventDefault();
   };
 
   hasGardenFunc = event => {
@@ -190,7 +191,7 @@ class QuizQuestion extends React.Component {
         <div className="form-group row">
           <div className="col-sm-10">
             <button
-              type="submit"
+              // type="submit"
               className="btn btn-primary pet-button"
               onClick={this.submitFunc}
             >

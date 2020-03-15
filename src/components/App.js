@@ -8,39 +8,9 @@ import axios from 'axios';
 class App extends React.Component {
   state = {
     animals: [],
-    showResult: true,
-    answers: []
+    showResult: false,
+    answers: {}
   };
-
-  componentDidMount = () => {
-    let urlneeded = 'https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/' + this.state.answers.hasGarden
-    console.log(`URL:  ${urlneeded}`);
-    axios
-      .get(urlneeded)
-      .then(response => {
-        this.setState({
-          animals: response.data.petloves
-        });
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  };
-
-  showResult() {
-    this.setState(prevState => ({ showResult: !prevState.showResult }));
-
-    // is the same as:
-    //   if (this.state.showResult) {
-    //     this.setState({
-    //       showResult: false
-    //     });
-    //   } else {
-    //     this.setState({
-    //       showResult: true
-    //     });
-    //   }
-  }
 
   info = animal => {
     return (
@@ -52,61 +22,57 @@ class App extends React.Component {
   };
 
   findPet = answer => {
-    var boolAnswer = answer === '1';
+    var numAnswer = parseInt(answer);
     const currentAnswers = {
-      hasGarden: boolAnswer
+      hasGarden: numAnswer
     };
-    const newAnswers = this.state.answers;
-    newAnswers.push(currentAnswers);
+    //Removed .push as array no longer needed
     this.setState({
-      answers: newAnswers
+      answers: currentAnswers
     });
-    console.log(JSON.stringify(newAnswers));
-  };
+    console.log(this.state.answers);
+    axios
+      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
+        params: {
+          // Don't use this.state as setState is async and will not update this.state 
+          hasGarden: numAnswer
+      }})
+      .then(response => {
+        this.setState({
+          animals: response.data.petloves
+        });
+        console.log(JSON.stringify(this.state.animals));
+      })
+      .catch(error => {
+        console.error(error);
+      });
 
-  // findPet = answer => {
-  //   var boolAnswer = answer === '1';
-  //   const currentAnswers = {
-  //     hasGarden: boolAnswer
-  //   };
-  //   const garden = this.state.answers;
-  //   // const newAnswers = this.state.answers;
-  //   axios
-  //     .get(
-  //       `https://ebty5goa66.execute-api.eu-west-2.amazonaws.com/dev/pets/${garden}`
-  //     )
-  //     .then(response => {
-  //       // handle success
-  //       garden.push(currentAnswers);
-  //       this.setState({
-  //         answers: garden
-  //       });
-  //       console.log(`garden: ${JSON.stringify(garden)}`);
-  //       console.log(garden);
-  //     })
-  //     .catch(error => {
-  //       // handle error
-  //       console.error(error);
-  //     });
-  // };
 
-  render() {
+};
+
+render() {
     return (
       <div className="container-fluid">
         <div className="App">
           <Banner />
-          {this.state.showResult ? (
-            <QuizQuestion
+          <QuizQuestion 
               findPetFunc={this.findPet}
               hasGarden={this.state.answers.hasGarden}
-            />
-          ) : null}
-          {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
+          />
+          <PetCard pets={this.state.animals} />
           <Footer className="footer-img" />
         </div>
       </div>
     );
   }
-}
-
+};
 export default App;
+
+// {!this.state.showResult ? (
+//   <QuizQuestion
+//     findPetFunc={this.findPet}
+//     hasGarden={this.state.answers.hasGarden}
+//   />
+// ) : null}
+
+// {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
