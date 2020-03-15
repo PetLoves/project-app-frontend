@@ -100,10 +100,6 @@ img {
   margin-top: 15px;
 }
 
-.footer-img {
-  background-image: url('../../src/images/petfooter.jpg');
-  background-color: #cccccc;
-}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
