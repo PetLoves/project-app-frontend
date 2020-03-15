@@ -8,7 +8,7 @@ import axios from 'axios';
 class App extends React.Component {
   state = {
     animals: [],
-    //showResult: false,
+    showResult: false,
     answers: []
   };
 
@@ -66,11 +66,12 @@ class App extends React.Component {
     });
     console.log(JSON.stringify(newAnswers));
     console.log(this.state.answers);
+    const params = {
+      hasGarden: this.state.answers.hasGarden,
+    };
     axios
-      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/', {
-        params: {
-          hasGarden: this.state.answers.hasGarden
-        }
+      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
+        params
       })
       .then(response => {
         this.setState({
@@ -80,6 +81,7 @@ class App extends React.Component {
       .catch(error => {
         console.error(error);
       });
+
     console.log(this.state.animals);
     console.log(JSON.stringify(this.state.animals));
 };
