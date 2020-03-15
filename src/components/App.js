@@ -13,8 +13,10 @@ class App extends React.Component {
   };
 
   componentDidMount = () => {
+    let urlneeded = 'https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/' + this.state.answers.hasGarden
+    console.log(`URL:  ${urlneeded}`);
     axios
-      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets')
+      .get(urlneeded)
       .then(response => {
         this.setState({
           animals: response.data.petloves
