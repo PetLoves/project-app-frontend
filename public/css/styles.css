@@ -3,6 +3,16 @@ h1 {
   font-weight: bolder;
 }
 
+footer {
+  background-image: url('https://health.maryland.gov/allegany/PublishingImages/PetsPeekingOverWall.jpg');
+  background-repeat: repeat-x;
+  background-size: 50%;
+  background-position: center;
+}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
 .Banner {
   padding-top: 1em;
   background-color: none;
@@ -90,6 +100,10 @@ img {
   margin-top: 15px;
 }
 
+.footer-img {
+  background-image: url('../../src/images/petfooter.jpg');
+  background-color: #cccccc;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

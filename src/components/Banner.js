@@ -12,18 +12,21 @@ class Banner extends React.Component {
           <h1>PetLoves</h1>
         </div>
         <div className="col-1">
-          <a href="#">
+          <a href="https://img.icons8.com/cotton/64/000000/like--v1.png">
             <img
               src="https://img.icons8.com/cotton/64/000000/like--v1.png"
-              class="img-responsive"
+              className="img-responsive"
               id="heart"
               alt=""
             />
           </a>
         </div>
         <div className="col-1">
-          <a href="#">
-            <img src="https://img.icons8.com/material-outlined/48/000000/user--v1.png" />
+          <a href="https://img.icons8.com/material-outlined/48/000000/user--v1.png">
+            <img
+              src="https://img.icons8.com/material-outlined/48/000000/user--v1.png"
+              alt=""
+            />
           </a>
         </div>
       </div>
