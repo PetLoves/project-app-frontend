@@ -50,7 +50,7 @@ class QuizQuestion extends React.Component {
         {/* Radio Buttons */}
         <fieldset className="form-group">
           <div className="row">
-            <legend className="col-form-label col-sm-6 pt-0">
+            <legend className="col-form-label-lg col-sm-6 pt-0">
               Do you have a garden?
             </legend>
             <div className="col-sm-6">
@@ -170,7 +170,7 @@ class QuizQuestion extends React.Component {
         </div> */}
 
         <div className="row">
-          <label htmlFor="activityLevel">What's your activity level?</label>
+          <label htmlFor="activityLevel" className="col-form-label-lg col-sm-6 pt-0">What's your activity level?</label>
           <input
             type="range"
             className="custom-range"
@@ -179,7 +179,7 @@ class QuizQuestion extends React.Component {
             step="1"
             id="custom"
           />
-          <div className="rangeWrapper">
+          <div className="rangeWrapper col-sm-6 pt-0">
             <p className="rangeLabel selected">Don't leave the house</p>
             <p className="rangeLabel">Pottering in the garden</p>
             <p className="rangeLabel">Daily walks</p>

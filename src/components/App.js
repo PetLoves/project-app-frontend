@@ -8,40 +8,43 @@ import axios from 'axios';
 class App extends React.Component {
   state = {
     animals: [],
-    showResult: true,
+    //showResult: false,
     answers: []
   };
 
-  componentDidMount = () => {
-    let urlneeded = 'https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/' + this.state.answers.hasGarden
-    console.log(`URL:  ${urlneeded}`);
-    axios
-      .get(urlneeded)
-      .then(response => {
-        this.setState({
-          animals: response.data.petloves
-        });
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  };
-
-  showResult() {
-    this.setState(prevState => ({ showResult: !prevState.showResult }));
-
-    // is the same as:
-    //   if (this.state.showResult) {
-    //     this.setState({
-    //       showResult: false
-    //     });
-    //   } else {
-    //     this.setState({
-    //       showResult: true
-    //     });
-    //   }
-  }
-
+  // componentDidMount = () => {
+  //   axios
+  //     .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets')
+  //     .then(response => {
+  //       this.setState({
+  //         animals: response.data.petloves
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  //     console.log(this.state.animals);
+  // };
+  // showResult() {
+  //   this.setState(prevState => ({ showResult: !prevState.showResult }));
+  //   // let urlneeded = 'https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/' + this.state.answers.hasGarden
+  //   // console.log(`URL:  ${urlneeded}`);
+  //   axios
+  //     .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/', {
+  //       params: {
+  //         hasGarden: this.state.answers.hasGarden
+  //       }
+  //     })
+  //     .then(response => {
+  //       this.setState({
+  //         animals: response.data.petloves
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  // };
+  
   info = animal => {
     return (
       <div>
@@ -52,9 +55,9 @@ class App extends React.Component {
   };
 
   findPet = answer => {
-    var boolAnswer = answer === '1';
+    var numAnswer = parseInt(answer);
     const currentAnswers = {
-      hasGarden: boolAnswer
+      hasGarden: numAnswer
     };
     const newAnswers = this.state.answers;
     newAnswers.push(currentAnswers);
@@ -62,7 +65,25 @@ class App extends React.Component {
       answers: newAnswers
     });
     console.log(JSON.stringify(newAnswers));
-  };
+    console.log(this.state.answers);
+    axios
+      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets/', {
+        params: {
+          hasGarden: this.state.answers.hasGarden
+        }
+      })
+      .then(response => {
+        this.setState({
+          animals: response.data.petloves
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
+    console.log(this.state.animals);
+    console.log(JSON.stringify(this.state.animals));
+};
+
 
   // findPet = answer => {
   //   var boolAnswer = answer === '1';
@@ -95,18 +116,24 @@ class App extends React.Component {
       <div className="container-fluid">
         <div className="App">
           <Banner />
-          {this.state.showResult ? (
-            <QuizQuestion
+          <QuizQuestion 
               findPetFunc={this.findPet}
               hasGarden={this.state.answers.hasGarden}
-            />
-          ) : null}
-          {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
+          />
+          <PetCard pets={this.state.animals} />
           <Footer className="footer-img" />
         </div>
       </div>
     );
   }
-}
-
+};
 export default App;
+
+// {!this.state.showResult ? (
+//   <QuizQuestion
+//     findPetFunc={this.findPet}
+//     hasGarden={this.state.answers.hasGarden}
+//   />
+// ) : null}
+
+// {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
