@@ -50,17 +50,26 @@ class App extends React.Component {
   };
 
   findPet = answer => {
-    //alert pulling in state from QuizQuestion
-    alert('I have a garden is ' + answer);
+    var boolAnswer = answer === "1";
+    const currentAnswers = {
+      hasGarden: boolAnswer
+    }
+    const newAnswers = this.state.answers;
+    newAnswers.push(currentAnswers)
+    this.setState({
+      answers: newAnswers
+    })
+    console.log(JSON.stringify(newAnswers))
   };
 
   render() {
+
     return (
       <div className="container-fluid">
         <div className="App">
           <Banner />
           {!this.state.showResult ? (
-            <QuizQuestion findPetFunc={this.findPet} />
+            <QuizQuestion findPetFunc={this.findPet} hasGarden={this.state.answers.hasGarden} />
           ) : null}
           {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
           <Footer />
