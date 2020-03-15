@@ -11,7 +11,7 @@ class Card extends React.Component {
           <div class="card-body">
             <h4 class="card-title">{this.props.name}</h4>
             <p class="card-text">{this.props.description}</p>
-            <button onclick="shoot()">Learn more</button>
+            <button class="toggle-button" id="centered-toggle-button" onClick={e => {this.showModal}}>Learn more</button>
           </div>
         </div>
       </div>
