@@ -9,7 +9,7 @@ export default class PetDetails extends React.Component {
   render() {
     if (!this.props.show) {
       return null;
-    }
+    };
     return (
       <div class="modal" id="modal">
         <h2>Modal Window</h2>
@@ -28,4 +28,4 @@ Modal.propTypes = {
   show: PropTypes.bool.isRequired
 };
 
-  export default PetDetails;
+export default PetDetails;
