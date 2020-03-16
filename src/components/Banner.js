@@ -1,12 +1,13 @@
 import React from 'react';
 import octoheart from '../images/octoheart.png';
+import petloveslogo from '../images/petloveslogo.png';
 
 class Banner extends React.Component {
   render() {
     return (
       <div className="row">
         <div className="col-1">
-          <img className="logo" alt="" src={octoheart} />
+          <img className="logo" alt="" src={petloveslogo} />
         </div>
         <div className="appName col-9">
           <h1>PetLoves</h1>
