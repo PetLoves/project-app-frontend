@@ -3,6 +3,17 @@ import Modal from 'react-modal';
 import PropTypes from "prop-types";
 
 class Card extends React.Component {
+
+  state = {
+    show: false
+  };
+
+  showModal = e => {
+    this.setState({
+      show: !this.state.show
+    });
+  };
+
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
   };
@@ -22,21 +33,13 @@ class Card extends React.Component {
             <div class="card-body">
               <h4 class="card-title">{this.props.name}</h4>
               <p class="card-text">{this.props.description}</p>
-              <button class="toggle-button" id="centered-toggle-button" onClick={e => { this.showModal }}>Learn more
-              <div class="modal" id="modal">
-                <h2>Pet Details
-                </h2>
-                <div class="content">{this.props.children}</div>
-                <div class="actions">
-                  <button class="toggle-button" onClick={this.onClose}>
-                    close
-                  </button>
+              <button class="toggle-button" id="centered-toggle-button" onClick={e => { this.showModal }}>Learn more</button>
+                  <Modal onClose={this.showModal} show={this.state.show}>
+                    Lorem ipsum dolar amet... I don't know Italian!
+                  </Modal>
                 </div>
               </div>
-              </button>
             </div>
-          </div>
-        </div>
       );
     }
   }

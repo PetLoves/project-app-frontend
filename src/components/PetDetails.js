@@ -3,9 +3,11 @@ import Modal from 'react-modal';
 import PropTypes from "prop-types";
 
 class PetDetails extends React.Component {
+  
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
   };default
+
   render() {
     if (!this.props.show) {
       return null;
