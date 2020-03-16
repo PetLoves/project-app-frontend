@@ -61,6 +61,7 @@ render() {
           <QuizQuestion 
               findPetFunc={this.findPet}
               hasGarden={this.state.answers.hasGarden}
+              hasChildren={this.state}
           />
           <PetCard pets={this.state.animals} />
           <Footer className="footer-img" />
