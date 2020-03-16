@@ -3,11 +3,12 @@ import React from 'react';
 class QuizQuestion extends React.Component {
   state = {
     hasGarden: 0,
-    hasChildren: 0
+    hasChildren: 0,
+    activitylevel: 1
   };
 
   submitFunc = event => {
-    this.props.findPetFunc(this.state.hasGarden, this.state.hasChildren);
+    this.props.findPetFunc(this.state.hasGarden, this.state.hasChildren, this.state.activitylevel);
     event.preventDefault();
   };
 
@@ -23,6 +24,13 @@ class QuizQuestion extends React.Component {
       hasChildren: event.target.value
     });
     console.log(`hasChildren: ${event.target.value}`);
+  }
+
+  activityFunc = event => {
+    this.setState({
+      activitylevel: event.target.value
+    });
+    console.log(`activitylevel: ${event.target.value}`);
   }
 
   render() {
@@ -188,6 +196,7 @@ class QuizQuestion extends React.Component {
             max="4"
             step="1"
             id="custom"
+            onChange={this.activityFunc}
           />
           <div className="rangeWrapper col-sm-6 pt-0">
             <p className="rangeLabel selected">Don't leave the house</p>
@@ -196,6 +205,8 @@ class QuizQuestion extends React.Component {
             <p className="rangeLabel">Running and hiking</p>
           </div>
         </div>
+
+        
 
         <div className="form-group row">
           <div className="col-sm-10">

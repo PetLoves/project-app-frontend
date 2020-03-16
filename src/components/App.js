@@ -21,12 +21,14 @@ class App extends React.Component {
     );
   };
 
-  findPet = (hasGardenResult, hasChildrenResult) => {
+  findPet = (hasGardenResult, hasChildrenResult, activitylevel) => {
     var numGarden = parseInt(hasGardenResult);
     var numChildren = parseInt(hasChildrenResult);
+    var numActivityLevel = parseInt(activitylevel);
     const currentAnswers = {
       hasGarden: numGarden,
-      hasChildren: numChildren
+      hasChildren: numChildren,
+      activitylevel: numActivityLevel
     };
     //Removed .push as array no longer needed
     this.setState({
@@ -38,7 +40,8 @@ class App extends React.Component {
         params: {
           // Don't use this.state as setState is async and will not update this.state 
           hasGarden: numGarden,
-          hasChildren: numChildren
+          hasChildren: numChildren,
+          activitylevel: numActivityLevel
       }})
       .then(response => {
         this.setState({
