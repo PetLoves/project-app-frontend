@@ -10,12 +10,12 @@ class Card extends React.Component {
   render() {
     console.log(this.props);
     console.log(this.props.pets);
-    
-      return (
 
-      // if (!this.props.show) {
-      //   return null;
-      // }
+    if (!this.props.show) {
+      return null;
+    };
+
+    return (
         <div className="col-md-4 card">
           <div class="card">
             <img class="card-img-top" src={this.props.img} alt="Card cap"></img>
@@ -38,7 +38,8 @@ class Card extends React.Component {
           </div>
         </div>
       );
-    };
+    }
+  }
   Modal.propTypes = {
     onClose: PropTypes.func.isRequired,
     show: PropTypes.bool.isRequired
