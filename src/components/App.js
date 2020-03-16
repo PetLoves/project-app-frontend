@@ -21,10 +21,16 @@ class App extends React.Component {
     );
   };
 
-  findPet = answer => {
-    var numAnswer = parseInt(answer);
+  findPet = (hasGardenResult, hasChildrenResult, activitylevel, companyNeeded) => {
+    var numGarden = parseInt(hasGardenResult);
+    var numChildren = parseInt(hasChildrenResult);
+    var numActivityLevel = parseInt(activitylevel);
+    var numCompanyNeeded = parseInt(companyNeeded);
     const currentAnswers = {
-      hasGarden: numAnswer
+      hasGarden: numGarden,
+      hasChildren: numChildren,
+      activitylevel: numActivityLevel,
+      companyNeeded: numCompanyNeeded
     };
     //Removed .push as array no longer needed
     this.setState({
@@ -35,7 +41,10 @@ class App extends React.Component {
       .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
         params: {
           // Don't use this.state as setState is async and will not update this.state 
-          hasGarden: numAnswer
+          hasGarden: numGarden,
+          hasChildren: numChildren,
+          activitylevel: numActivityLevel,
+          companyNeeded: numCompanyNeeded
       }})
       .then(response => {
         this.setState({
@@ -58,6 +67,7 @@ render() {
           <QuizQuestion 
               findPetFunc={this.findPet}
               hasGarden={this.state.answers.hasGarden}
+              hasChildren={this.state}
           />
           <PetCard pets={this.state.animals} />
           <Footer className="footer-img" />
