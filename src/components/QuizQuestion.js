@@ -4,11 +4,12 @@ class QuizQuestion extends React.Component {
   state = {
     hasGarden: 0,
     hasChildren: 0,
-    activitylevel: 1
+    activitylevel: 1,
+    companyNeeded: 0
   };
 
   submitFunc = event => {
-    this.props.findPetFunc(this.state.hasGarden, this.state.hasChildren, this.state.activitylevel);
+    this.props.findPetFunc(this.state.hasGarden, this.state.hasChildren, this.state.activitylevel, this.state.companyNeeded);
     event.preventDefault();
   };
 
@@ -31,6 +32,13 @@ class QuizQuestion extends React.Component {
       activitylevel: event.target.value
     });
     console.log(`activitylevel: ${event.target.value}`);
+  }
+
+  companyFunc = event => {
+    this.setState({
+      companyNeeded: event.target.value
+    });
+    console.log(`companyNeeded: ${event.target.value}`);
   }
 
   render() {
@@ -197,6 +205,25 @@ class QuizQuestion extends React.Component {
             step="1"
             id="custom"
             onChange={this.activityFunc}
+          />
+          <div className="rangeWrapper col-sm-6 pt-0">
+            <p className="rangeLabel selected">Don't leave the house</p>
+            <p className="rangeLabel">Pottering in the garden</p>
+            <p className="rangeLabel">Daily walks</p>
+            <p className="rangeLabel">Running and hiking</p>
+          </div>
+        </div>
+
+        <div className="row">
+          <label htmlFor="activityLevel" className="col-form-label-lg col-sm-6 pt-0">How much time can you spend at home?</label>
+          <input
+            type="range"
+            className="custom-range"
+            min="1"
+            max="4"
+            step="1"
+            id="custom"
+            onChange={this.companyFunc}
           />
           <div className="rangeWrapper col-sm-6 pt-0">
             <p className="rangeLabel selected">Don't leave the house</p>
