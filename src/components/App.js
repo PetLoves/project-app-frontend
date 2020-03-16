@@ -25,7 +25,7 @@ class App extends React.Component {
     var numGarden = parseInt(hasGardenResult);
     var numChildren = parseInt(hasChildrenResult);
     var numActivityLevel = parseInt(activitylevel);
-    var numCompanyNeeded = parseInt(activitylevel);
+    var numCompanyNeeded = parseInt(companyNeeded);
     const currentAnswers = {
       hasGarden: numGarden,
       hasChildren: numChildren,

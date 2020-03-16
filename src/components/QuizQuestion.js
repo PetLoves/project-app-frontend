@@ -203,7 +203,7 @@ class QuizQuestion extends React.Component {
             min="1"
             max="4"
             step="1"
-            id="custom"
+            id="activity"
             onChange={this.activityFunc}
           />
           <div className="rangeWrapper col-sm-6 pt-0">
@@ -215,14 +215,14 @@ class QuizQuestion extends React.Component {
         </div>
 
         <div className="row">
-          <label htmlFor="activityLevel" className="col-form-label-lg col-sm-6 pt-0">How much time can you spend at home?</label>
+          <label htmlFor="companyNeeded" className="col-form-label-lg col-sm-6 pt-0">How much time can you spend at home?</label>
           <input
             type="range"
             className="custom-range"
             min="1"
             max="4"
             step="1"
-            id="custom"
+            id="company"
             onChange={this.companyFunc}
           />
           <div className="rangeWrapper col-sm-6 pt-0">
