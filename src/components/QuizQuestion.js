@@ -29,7 +29,7 @@ class QuizQuestion extends React.Component {
 
   activityFunc = event => {
     this.setState({
-      activitylevel: event.target.value
+      activitylevel: (5 - event.target.value)
     });
     console.log(`activitylevel: ${event.target.value}`);
   }
