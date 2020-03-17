@@ -112,7 +112,7 @@ class QuizQuestion extends React.Component {
 
         <fieldset className="form-group">
           <div className="row">
-            <legend className="col-form-label col-sm-6 pt-0">
+            <legend className="col-form-label-lg col-sm-6 pt-0">
               Do you have children?
             </legend>
             <div className="col-sm-6">
@@ -207,9 +207,9 @@ class QuizQuestion extends React.Component {
             onChange={this.activityFunc}
           />
           <div className="rangeWrapper col-sm-6 pt-0">
-            <p className="rangeLabel selected">Don't leave the house</p>
-            <p className="rangeLabel">Pottering in the garden</p>
-            <p className="rangeLabel">Daily walks</p>
+            <p className="rangeLabel selected">Couch potato</p>
+            {/* <p className="rangeLabel">Pottering in the garden</p>
+            <p className="rangeLabel">Daily walks</p> */}
             <p className="rangeLabel">Running and hiking</p>
           </div>
         </div>
@@ -227,9 +227,9 @@ class QuizQuestion extends React.Component {
           />
           <div className="rangeWrapper col-sm-6 pt-0">
             <p className="rangeLabel selected">Don't leave the house</p>
-            <p className="rangeLabel">Pottering in the garden</p>
-            <p className="rangeLabel">Daily walks</p>
-            <p className="rangeLabel">Running and hiking</p>
+            {/* <p className="rangeLabel">Pottering in the garden</p>
+            <p className="rangeLabel">Daily walks</p> */}
+            <p className="rangeLabel">Work full-time and travel often</p>
           </div>
         </div>
 
