@@ -5,7 +5,7 @@ class Nav extends React.Component {
   render() {
     return (
       <section class="red-section" id="title">
-        <div class="container-fluid">
+        <div class="container-fluid top">
           <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="">
               PetLoves
@@ -36,6 +36,7 @@ class Nav extends React.Component {
                 <li class="nav-item">
                   <a class="nav-link" href="#cta">
                     <i class="far fa-heart fa-2x"></i>
+                    {/* <img class="small-logo" src={heartlogo} alt="logo" /> */}
                   </a>
                 </li>
               </ul>
@@ -45,17 +46,16 @@ class Nav extends React.Component {
           <div class="row">
             <div class="col-md-6">
               <h1 class="big-heading">Find the love of your life.</h1>
-              <button type="button" class="btn btn-dark btn-lg downloadbutton">
-                <i class="fab fa-apple"></i>
-                Download
+              <button type="button" class="btn btn-outline-light btn-lg">
+                Search Now
               </button>
-              <button
+              {/* <button
                 type="button"
                 class="btn btn-outline-light btn-lg downloadbutton"
               >
                 <i class="fab fa-google-play"></i>
                 Download
-              </button>
+              </button> */}
             </div>
             <div class="col-md-6">
               <img class="title-image" src={heartlogo} alt="logo" />

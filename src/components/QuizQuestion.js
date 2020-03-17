@@ -37,6 +37,16 @@ class QuizQuestion extends React.Component {
       activitylevel: 5 - event.target.value
     });
     console.log(`activitylevel: ${event.target.value}`);
+    let label = '';
+    if (event.target.value == 1) {
+      label = "Don't leave the house";
+    } else if (event.target.value == 2) {
+      label = 'Pottering in the garden';
+    } else if (event.target.value == 3) {
+      label = 'Daily walks';
+    } else {
+      label = 'Running and hiking';
+    }
   };
 
   companyFunc = event => {
