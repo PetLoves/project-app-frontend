@@ -21,6 +21,7 @@ h6 {
 .big-heading {
   font-size: 3rem;
   line-height: 1.5;
+  color: #7fffd4;
 }
 
 .section-heading {
@@ -36,14 +37,12 @@ h6 {
 
 /* Sections */
 
-.red-section {
+.top-section {
   /* background-color: #ff4c68; */
   background-image: url('mutley.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 700px;
-  color: rgb(206, 112, 206);
-  position: relative;
+  height: 657px;
 }
 
 .title-image {
@@ -57,6 +56,8 @@ h6 {
 
 .white-section {
   background-color: #fff;
+
+  position: relative;
 }
 
 /* Navigation Bar */

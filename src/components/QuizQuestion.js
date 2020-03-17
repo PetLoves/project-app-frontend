@@ -5,7 +5,8 @@ class QuizQuestion extends React.Component {
     hasGarden: 0,
     hasChildren: 0,
     activitylevel: 1,
-    companyNeeded: 0
+    companyNeeded: 4,
+    label: 4
   };
 
   submitFunc = event => {
@@ -34,19 +35,11 @@ class QuizQuestion extends React.Component {
 
   activityFunc = event => {
     this.setState({
-      activitylevel: 5 - event.target.value
+      activitylevel: 5 - event.target.value,
+      label: event.target.value
     });
-    console.log(`activitylevel: ${event.target.value}`);
-    let label = '';
-    if (event.target.value == 1) {
-      label = "Don't leave the house";
-    } else if (event.target.value == 2) {
-      label = 'Pottering in the garden';
-    } else if (event.target.value == 3) {
-      label = 'Daily walks';
-    } else {
-      label = 'Running and hiking';
-    }
+    console.log(`activitylevel: ${5 - event.target.value}`);
+    console.log(`label: ${event.target.value}`);
   };
 
   companyFunc = event => {
@@ -57,6 +50,20 @@ class QuizQuestion extends React.Component {
   };
 
   render() {
+    const ACTIVITY_LEVELS = [
+      "Don't leave the house",
+      'Pottering in the garden',
+      'Daily walks',
+      'Running and hiking'
+    ];
+
+    const COMPANY_NEEDED = [
+      'Almost all the time',
+      'I leave the house for short spells',
+      "I might be out for long periods",
+      "I'm out most of the day and weekend"
+    ];
+
     return (
       <section class="white-section" id="features">
         <div class="container-fluid">
@@ -232,10 +239,9 @@ class QuizQuestion extends React.Component {
                 onChange={this.activityFunc}
               />
               <div className="rangeWrapper col-sm-6 pt-0">
-                <p className="rangeLabel selected">Don't leave the house</p>
-                <p className="rangeLabel">Pottering in the garden</p>
-                <p className="rangeLabel">Daily walks</p>
-                <p className="rangeLabel">Running and hiking</p>
+                <p className="rangeLabel selected">
+                  {ACTIVITY_LEVELS[this.state.label - 1]}
+                </p>
               </div>
             </div>
 
@@ -244,7 +250,7 @@ class QuizQuestion extends React.Component {
                 htmlFor="companyNeeded"
                 className="col-form-label-lg col-m-6 pt-0"
               >
-                How much time can you spend at home?
+                How much time can you spend with me?
               </label>
               <input
                 type="range"
@@ -256,10 +262,9 @@ class QuizQuestion extends React.Component {
                 onChange={this.companyFunc}
               />
               <div className="rangeWrapper col-sm-6 pt-0">
-                <p className="rangeLabel selected">Don't leave the house</p>
-                <p className="rangeLabel">Pottering in the garden</p>
-                <p className="rangeLabel">Daily walks</p>
-                <p className="rangeLabel">Running and hiking</p>
+                <p className="rangeLabel selected">
+                  {COMPANY_NEEDED[this.state.companyNeeded - 1]}
+                </p>
               </div>
             </div>
 

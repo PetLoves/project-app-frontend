@@ -4,7 +4,7 @@ import heartlogo from '../images/heartlogo.png';
 class Nav extends React.Component {
   render() {
     return (
-      <section class="red-section" id="title">
+      <section class="top-section" id="title">
         <div class="container-fluid top">
           <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="">
