@@ -1,19 +1,17 @@
 import React from 'react';
+import heartlogo from '../images/heartlogo.png';
 
 class Nav extends React.Component {
   render() {
     return (
-      <div className="red-section" id="title">
-        <div className="container-fluid">
-          <nav className="navbar navbar-expand-lg navbar-dark">
-            {/* "navbar-expand-lg" in the nav tag will uncollapse the handburger 
-        if you place navbar-brand below the button the brand will float right, 
-              above the button the brand stays to left*/}
-            <a className="navbar-brand" href="#">
-              tindog
+      <section class="red-section" id="title">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="">
+              PetLoves
             </a>
             <button
-              className="navbar-toggler"
+              class="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNav"
@@ -21,31 +19,50 @@ class Nav extends React.Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              {/* ml-auto (margin left auto class floats the items to the right)  */}
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="#footer">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                {/* <li class="nav-item">
+                  <a class="nav-link" href="#footer">
                     Contact
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#pricing">
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">
                     Pricing
                   </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#cta">
-                    Download
+                </li> */}
+                <li class="nav-item">
+                  <a class="nav-link" href="#cta">
+                    <i class="far fa-heart fa-2x"></i>
                   </a>
                 </li>
               </ul>
             </div>
           </nav>
+
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="big-heading">Find the love of your life.</h1>
+              <button type="button" class="btn btn-dark btn-lg downloadbutton">
+                <i class="fab fa-apple"></i>
+                Download
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-light btn-lg downloadbutton"
+              >
+                <i class="fab fa-google-play"></i>
+                Download
+              </button>
+            </div>
+            <div class="col-md-6">
+              <img class="title-image" src={heartlogo} alt="logo" />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
