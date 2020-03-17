@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from './Navbar';
 import Banner from './Banner';
 import PetCard from './PetCard';
 import QuizQuestion from './QuizQuestion';
@@ -21,7 +22,12 @@ class App extends React.Component {
     );
   };
 
-  findPet = (hasGardenResult, hasChildrenResult, activitylevel, companyNeeded) => {
+  findPet = (
+    hasGardenResult,
+    hasChildrenResult,
+    activitylevel,
+    companyNeeded
+  ) => {
     var numGarden = parseInt(hasGardenResult);
     var numChildren = parseInt(hasChildrenResult);
     var numActivityLevel = parseInt(activitylevel);
@@ -40,12 +46,13 @@ class App extends React.Component {
     axios
       .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
         params: {
-          // Don't use this.state as setState is async and will not update this.state 
+          // Don't use this.state as setState is async and will not update this.state
           hasGarden: numGarden,
           hasChildren: numChildren,
           activitylevel: numActivityLevel,
           companyNeeded: numCompanyNeeded
-      }})
+        }
+      })
       .then(response => {
         this.setState({
           animals: response.data.petloves
@@ -55,27 +62,24 @@ class App extends React.Component {
       .catch(error => {
         console.error(error);
       });
+  };
 
-
-};
-
-render() {
+  render() {
     return (
-      <div className="container-fluid">
-        <div className="App">
-          <Banner />
-          <QuizQuestion 
-              findPetFunc={this.findPet}
-              hasGarden={this.state.answers.hasGarden}
-              hasChildren={this.state}
-          />
-          <PetCard pets={this.state.animals} />
-          <Footer className="footer-img" />
-        </div>
+      <div className="App">
+        <Nav />
+        {/* <Banner /> */}
+        <QuizQuestion
+          findPetFunc={this.findPet}
+          hasGarden={this.state.answers.hasGarden}
+          hasChildren={this.state}
+        />
+        <PetCard pets={this.state.animals} />
+        <Footer className="footer-img" />
       </div>
     );
   }
-};
+}
 export default App;
 
 // {!this.state.showResult ? (
