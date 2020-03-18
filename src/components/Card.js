@@ -1,8 +1,8 @@
 import React from 'react';
 
-// submitFunc = event => {
-//   this.props.findPetFunc(this.state.hasGarden);
-// };
+submitFunc = event => {
+  this.props.findPetFunc(this.state.hasGarden);
+};
 
 class Card extends React.Component {
   render() {
