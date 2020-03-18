@@ -30,10 +30,14 @@ class Card extends React.Component {
               onClick={e => { this.showModal(e); }}
             >Learn more</button>
             <PetDetails name={this.props.name} onClose={this.showModal} show={this.state.show}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+              {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
               deserunt corrupti, ut fugit magni qui quasi nisi amet repellendus non
               fuga omnis a sed impedit explicabo accusantium nihil doloremque
-              consequuntur.
+              consequuntur. */}
+              <p><h6>Color</h6>{this.props.color}</p>
+              <p><h6>Age</h6>{this.props.age}</p>
+              <p><h6>Sex</h6>{this.props.sex}</p>
+              
             </PetDetails>
           </div>
         </div>

@@ -14,6 +14,9 @@ class PetCard extends React.Component {
               name={animal.name}
               description={animal.description}
               img={animal.image_path}
+              color={animal.color}
+              sex={animal.sex}
+              age={animal.age}
             />
           );
         })}
