@@ -38,7 +38,6 @@ class App extends React.Component {
       activitylevel: numActivityLevel,
       companyNeeded: numCompanyNeeded
     };
-    //Removed .push as array no longer needed
     this.setState({
       answers: currentAnswers
     });
@@ -46,7 +45,6 @@ class App extends React.Component {
     axios
       .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
         params: {
-          // Don't use this.state as setState is async and will not update this.state
           hasGarden: numGarden,
           hasChildren: numChildren,
           activitylevel: numActivityLevel,
@@ -74,19 +72,10 @@ class App extends React.Component {
           hasGarden={this.state.answers.hasGarden}
           hasChildren={this.state}
         />
-        <PetCard pets={this.state.animals} />
+        <PetCard pets={this.state.animals}/>
         <Footer className="footer-img" />
       </div>
     );
   }
 }
 export default App;
-
-// {!this.state.showResult ? (
-//   <QuizQuestion
-//     findPetFunc={this.findPet}
-//     hasGarden={this.state.answers.hasGarden}
-//   />
-// ) : null}
-
-// {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
