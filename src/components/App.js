@@ -11,14 +11,14 @@ class App extends React.Component {
     animals: [],
     showResult: false,
     answers: {},
-    show: false
+    //show: false
   };
 
-  showModal = e => {
-    this.setState({
-      show: !this.state.show
-    });
-  };
+  // showModal = e => {
+  //   this.setState({
+  //     show: !this.state.show
+  //   });
+  // };
 
   info = animal => {
     return (
@@ -81,7 +81,8 @@ class App extends React.Component {
           hasGarden={this.state.answers.hasGarden}
           hasChildren={this.state}
         />
-        <PetCard pets={this.state.animals} showModal={showModal} show={this.state.show}/>
+        {/* <PetCard pets={this.state.animals} showModal={showModal} show={this.state.show}/> */}
+        <PetCard pets={this.state.animals}/>
         <Footer className="footer-img" />
       </div>
     );
