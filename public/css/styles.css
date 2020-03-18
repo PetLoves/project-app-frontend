@@ -146,17 +146,13 @@ footer {
   margin-top: 2%;
 }
 
-/* Petcard */
-
 .petCard {
   padding: 0px;
   margin: 0px;
 }
 
 .card {
-  /*border-radius: 40px;*/
   border: none;
-  /*background-color: rgb(253, 229, 253);*/
   margin-bottom: 5px;
   border-color: #c7135c;
 }
@@ -175,11 +171,6 @@ footer {
   box-shadow: 1px 1px 5px 0px #000000;
 }
 
-/* .card-img-top {
-  border-radius: 40px;
-  margin-top: 15px;
-} */
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -197,4 +188,55 @@ footer {
 
 .moreDetails {
   background-color: #c7135c;
+}
+
+
+.petdetails {
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  transition: 1.1s ease-out;
+  /* box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2); */
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+@supports (offset-rotation: 0deg) {
+  offset-rotation: 0deg;
+  offset-path: path("M 250,100 S -300,500 -700,-200");
+  .modal.off {
+    offset-distance: 100%;
+  }
+}
+@media (prefers-reduced-motion) {
+  .modal {
+    offset-path: none;
+  }
+}
+.petdetails h2 {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  margin: 0;
+}
+.petdetails .content {
+  padding: 1rem;
+}
+.petdetails .actions {
+  border-top: 1px solid #ccc;
+  background: #eee;
+  padding: 0.5rem 1rem;
+}
+.petdetails .actions button {
+  border: 0;
+  background: #78f89f;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+#toggle-button {
+  position: absolute;
 }
