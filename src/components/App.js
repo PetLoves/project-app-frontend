@@ -89,12 +89,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-// {!this.state.showResult ? (
-//   <QuizQuestion
-//     findPetFunc={this.findPet}
-//     hasGarden={this.state.answers.hasGarden}
-//   />
-// ) : null}
-
-// {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
