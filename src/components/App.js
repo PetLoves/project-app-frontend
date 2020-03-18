@@ -10,7 +10,14 @@ class App extends React.Component {
   state = {
     animals: [],
     showResult: false,
-    answers: {}
+    answers: {},
+    show: false
+  };
+
+  showModal = e => {
+    this.setState({
+      show: !this.state.show
+    });
   };
 
   info = animal => {
@@ -74,7 +81,7 @@ class App extends React.Component {
           hasGarden={this.state.answers.hasGarden}
           hasChildren={this.state}
         />
-        <PetCard pets={this.state.animals} />
+        <PetCard pets={this.state.animals} showModal={showModal} show={this.state.show}/>
         <Footer className="footer-img" />
       </div>
     );
