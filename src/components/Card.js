@@ -34,9 +34,9 @@ class Card extends React.Component {
               <h4 class="card-title">{this.props.name}</h4>
               <p class="card-text">{this.props.description}</p>
               <button class="toggle-button" id="centered-toggle-button" onClick={e => { this.showModal }}>Learn more</button>
-                  <Modal onClose={this.showModal} show={this.state.show}>
+                  {/* <Modal onClose={this.showModal} show={this.state.show}>
                     Lorem ipsum dolar amet... I don't know Italian!
-                  </Modal>
+                  </Modal> */}
                 </div>
               </div>
             </div>
