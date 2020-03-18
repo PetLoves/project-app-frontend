@@ -29,10 +29,6 @@ class Card extends React.Component {
               id="centered-toggle-button"
               onClick={e => { this.showModal(e); }}
             >Learn more</button>
-            {/* <PetDetails onClose={this.showModal} show={this.props.show}>
-                    Lorem ipsum dolar amet... I don't know Italian!
-                  </PetDetails> */}
-
             <PetDetails name={this.props.name} onClose={this.showModal} show={this.state.show}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
               deserunt corrupti, ut fugit magni qui quasi nisi amet repellendus non
@@ -45,9 +41,5 @@ class Card extends React.Component {
     );
   }
 }
-// Modal.propTypes = {
-//   onClose: PropTypes.func.isRequired,
-//   show: PropTypes.bool.isRequired
-// };
 
 export default Card;

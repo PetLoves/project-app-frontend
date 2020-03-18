@@ -10,15 +10,8 @@ class App extends React.Component {
   state = {
     animals: [],
     showResult: false,
-    answers: {},
-    //show: false
+    answers: {}
   };
-
-  // showModal = e => {
-  //   this.setState({
-  //     show: !this.state.show
-  //   });
-  // };
 
   info = animal => {
     return (
@@ -45,7 +38,6 @@ class App extends React.Component {
       activitylevel: numActivityLevel,
       companyNeeded: numCompanyNeeded
     };
-    //Removed .push as array no longer needed
     this.setState({
       answers: currentAnswers
     });
@@ -53,7 +45,6 @@ class App extends React.Component {
     axios
       .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
         params: {
-          // Don't use this.state as setState is async and will not update this.state
           hasGarden: numGarden,
           hasChildren: numChildren,
           activitylevel: numActivityLevel,
@@ -81,7 +72,6 @@ class App extends React.Component {
           hasGarden={this.state.answers.hasGarden}
           hasChildren={this.state}
         />
-        {/* <PetCard pets={this.state.animals} showModal={showModal} show={this.state.show}/> */}
         <PetCard pets={this.state.animals}/>
         <Footer className="footer-img" />
       </div>
