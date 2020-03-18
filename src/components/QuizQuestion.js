@@ -60,7 +60,7 @@ class QuizQuestion extends React.Component {
     const COMPANY_NEEDED = [
       'Almost all the time',
       'I leave the house for short spells',
-      "I might be out for long periods",
+      'I might be out for long periods',
       "I'm out most of the day and weekend"
     ];
 
@@ -225,7 +225,7 @@ class QuizQuestion extends React.Component {
             <div className="row">
               <label
                 htmlFor="activityLevel"
-                className="col-form-label-lg col-sm-6 pt-0"
+                className="col-form-label-lg col-m-6 pt-0"
               >
                 What's your activity level?
               </label>
@@ -238,7 +238,7 @@ class QuizQuestion extends React.Component {
                 id="activity"
                 onChange={this.activityFunc}
               />
-              <div className="rangeWrapper col-sm-6 pt-0">
+              <div className="rangeWrapper col-m-6 pt-0">
                 <p className="rangeLabel selected">
                   {ACTIVITY_LEVELS[this.state.label - 1]}
                 </p>
@@ -261,18 +261,18 @@ class QuizQuestion extends React.Component {
                 id="company"
                 onChange={this.companyFunc}
               />
-              <div className="rangeWrapper col-sm-6 pt-0">
+              <div className="rangeWrapper col-m-6 pt-0">
                 <p className="rangeLabel selected">
                   {COMPANY_NEEDED[this.state.companyNeeded - 1]}
                 </p>
               </div>
             </div>
 
-            <div className="form-group row">
-              <div className="col-sm-10">
+            <div className="form-group row justify-content-md-center">
+              <div className="col-sm-10 text-center">
                 <button
                   // type="submit"
-                  className="btn btn-primary pet-button"
+                  className="btn btn-outline-dark btn-lg pet-button"
                   onClick={this.submitFunc}
                 >
                   Find your Pet Love
