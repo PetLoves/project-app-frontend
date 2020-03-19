@@ -54,6 +54,7 @@ h6 {
   opacity: 0.75;
 }
 
+/* Background quiz */
 .white-section {
   background-color: #fff;
 
@@ -75,6 +76,11 @@ h6 {
   font-size: 2rem;
 }
 
+.navbar-logo {
+  width: 10%;
+  padding: 1%;
+}
+
 .nav-item {
   padding: 0 18px;
 }
@@ -88,13 +94,6 @@ h6 {
 
 #title {
   text-align: left;
-}
-
-footer {
-  background-image: url('https://health.maryland.gov/allegany/PublishingImages/PetsPeekingOverWall.jpg');
-  background-repeat: repeat-x;
-  background-size: 50%;
-  background-position: center;
 }
 
 .Banner {
@@ -123,10 +122,12 @@ footer {
   text-align: center;
 }
 
-.footer {
-  position: relative;
-  background-repeat: no-repeat;
-}
+/* Quiz Question */
+
+/* .question {
+  font-family: 'Montserrat';
+  color: lightgrey;
+} */
 
 .form-style {
   text-align: left;
@@ -151,7 +152,7 @@ footer {
   margin: 0px;
 }
 
-.card {
+.petdetail-card {
   border: none;
   margin-bottom: 5px;
   border-color: #c7135c;
@@ -162,7 +163,7 @@ footer {
 }
 
 .card-title {
-  color: #b8225b;
+  color: #cea2cb;
 }
 
 .button {
@@ -171,23 +172,8 @@ footer {
   box-shadow: 1px 1px 5px 0px #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .moreDetails {
-  background-color: #c7135c;
+  background-color: #cea2cb;
 }
 
 .petdetails {
@@ -202,18 +188,6 @@ footer {
   visibility: visible;
 }
 
-@supports (offset-rotation: 0deg) {
-  offset-rotation: 0deg;
-  offset-path: path('M 250,100 S -300,500 -700,-200');
-  .modal.off {
-    offset-distance: 100%;
-  }
-}
-@media (prefers-reduced-motion) {
-  .modal {
-    offset-path: none;
-  }
-}
 .petdetails h2 {
   border-bottom: 1px solid #ccc;
   padding: 1rem;
@@ -238,4 +212,122 @@ footer {
 
 #toggle-button {
   position: absolute;
+}
+
+/* Testimonals Section */
+.info-section {
+  background-color: #cea2cb;
+  color: #fff;
+}
+
+#testimonials {
+  background-color: #cea2cb;
+}
+
+.testimonial-text {
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+.testimonal-img {
+  border-radius: 100%;
+  width: 12%;
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 8% 15% 4% 15%;
+}
+
+/* Partner Section */
+#partners {
+  background-color: #cea2cb;
+  padding-bottom: 3%;
+}
+
+.partner-logo {
+  width: 12%;
+  margin: 30px 30px 40px;
+}
+
+/* adoption Section */
+
+#adoption {
+  padding: 50px;
+}
+
+.adoption-title {
+  font-size: 1.3rem;
+}
+
+.adoption-text {
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+.adoption-column {
+  padding: 3% 2%;
+}
+
+.animal-button {
+  margin-top: 10%;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #cea2cb;
+  color: #fff;
+}
+
+#footer {
+  padding: 5% 12% 1% 12%;
+  line-height: 1.5;
+}
+
+.footer-brand {
+  display: block;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  width: 8%;
+}
+
+.smaller {
+  font-size: 0.8rem;
+}
+
+.spaced {
+  padding: 1%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@supports (offset-rotation: 0deg) {
+  offset-rotation: 0deg;
+  offset-path: path('M 250,100 S -300,500 -700,-200');
+  .modal.off {
+    offset-distance: 100%;
+  }
+}
+@media (prefers-reduced-motion) {
+  .modal {
+    offset-path: none;
+  }
 }

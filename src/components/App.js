@@ -1,8 +1,9 @@
 import React from 'react';
 import Nav from './Navbar';
-import Banner from './Banner';
 import PetCard from './PetCard';
 import QuizQuestion from './QuizQuestion';
+import Carousel from './Testimonials';
+import Adoption from './Adoption';
 import Footer from './Footer.js';
 import axios from 'axios';
 
@@ -72,7 +73,9 @@ class App extends React.Component {
           hasGarden={this.state.answers.hasGarden}
           hasChildren={this.state}
         />
-        <PetCard pets={this.state.animals}/>
+        <PetCard pets={this.state.animals} />
+        <Carousel />
+        <Adoption />
         <Footer className="footer-img" />
       </div>
     );
