@@ -16,7 +16,7 @@ class QuizQuestion extends React.Component {
       this.state.activitylevel,
       this.state.companyNeeded
     );
-    event.preventDefault();
+    //event.preventDefault();
   };
 
   hasGardenFunc = event => {
@@ -282,13 +282,14 @@ class QuizQuestion extends React.Component {
 
             <div className="form-group row justify-content-md-center">
               <div className="col-sm-10 text-center">
-                <button
+                <a
                   // type="submit"
                   className="btn btn-dark btn-lg pet-button"
                   onClick={this.submitFunc}
+                  href="#petcard"
                 >
                   Find your Pet Love
-                </button>
+                </a>
               </div>
             </div>
           </form>
