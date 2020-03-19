@@ -71,12 +71,12 @@ class QuizQuestion extends React.Component {
             <div className="form-group">
               <label
                 htmlFor="formGroupExampleInput"
-                className="col-form-label-lg"
+                className="col-form-label-lg col-m-6 pt-0"
               >
-                What's your name?
+                <h5>What's your name?</h5>
               </label>
 
-              <div className="col-sm-10 move-input ">
+              <div className="col-m-6 move-input ">
                 <input
                   type="text"
                   className="form-control form-control-lg"
@@ -102,8 +102,8 @@ class QuizQuestion extends React.Component {
             {/* Radio Buttons */}
             <fieldset className="form-group">
               <div className="row">
-                <legend className="col-form-label-lg col-sm-6 pt-0">
-                  Do you have a garden?
+                <legend className="col-form-label-lg col-m-6 pt-0">
+                  <h5>Do you have a garden?</h5>
                 </legend>
                 <div className="col-sm-6">
                   <div className="form-check">
@@ -115,7 +115,10 @@ class QuizQuestion extends React.Component {
                       value="1"
                       onClick={this.hasGardenFunc}
                     />
-                    <label className="form-check-label" htmlFor="gridRadios1">
+                    <label
+                      className="form-check-label spaced"
+                      htmlFor="gridRadios1"
+                    >
                       Yes
                     </label>
                   </div>
@@ -129,7 +132,10 @@ class QuizQuestion extends React.Component {
                       value="0"
                       onClick={this.hasGardenFunc}
                     />
-                    <label className="form-check-label" htmlFor="gridRadios2">
+                    <label
+                      className="form-check-label spaced"
+                      htmlFor="gridRadios2"
+                    >
                       No
                     </label>
                   </div>
@@ -139,8 +145,8 @@ class QuizQuestion extends React.Component {
 
             <fieldset className="form-group">
               <div className="row">
-                <legend className="col-form-label-lg col-sm-6 pt-0">
-                  Do you have children?
+                <legend className="col-form-label-lg col-m-6 pt-0">
+                  <h5>Do you have children?</h5>
                 </legend>
                 <div className="col-sm-6">
                   <div className="form-check">
@@ -152,7 +158,10 @@ class QuizQuestion extends React.Component {
                       value="1"
                       onClick={this.hasChildFunc}
                     />
-                    <label className="form-check-label" for="gridRadios1">
+                    <label
+                      className="form-check-label spaced"
+                      for="gridRadios1"
+                    >
                       Yes
                     </label>
                   </div>
@@ -166,7 +175,10 @@ class QuizQuestion extends React.Component {
                       value="0"
                       onClick={this.hasChildFunc}
                     />
-                    <label className="form-check-label" for="gridRadios2">
+                    <label
+                      className="form-check-label spaced"
+                      for="gridRadios2"
+                    >
                       No
                     </label>
                   </div>
@@ -225,13 +237,13 @@ class QuizQuestion extends React.Component {
             <div className="row">
               <label
                 htmlFor="activityLevel"
-                className="col-form-label-lg col-m-6 pt-0"
+                className="col-form-label-lg col-m-6 pt-0 "
               >
-                What's your activity level?
+                <h5>What's your activity level?</h5>
               </label>
               <input
                 type="range"
-                className="custom-range"
+                className="custom-range spaced"
                 min="1"
                 max="4"
                 step="1"
@@ -250,11 +262,11 @@ class QuizQuestion extends React.Component {
                 htmlFor="companyNeeded"
                 className="col-form-label-lg col-m-6 pt-0"
               >
-                How much time can you spend with me?
+                <h5>How much time can you spend with me?</h5>
               </label>
               <input
                 type="range"
-                className="custom-range"
+                className="custom-range spaced"
                 min="1"
                 max="4"
                 step="1"
@@ -272,7 +284,7 @@ class QuizQuestion extends React.Component {
               <div className="col-sm-10 text-center">
                 <button
                   // type="submit"
-                  className="btn btn-outline-dark btn-lg pet-button"
+                  className="btn btn-dark btn-lg pet-button"
                   onClick={this.submitFunc}
                 >
                   Find your Pet Love

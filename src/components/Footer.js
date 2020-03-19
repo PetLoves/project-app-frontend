@@ -1,15 +1,19 @@
 import React from 'react';
-
+import logowhite from '../images/petloveswhite.png'
 
 class Footer extends React.Component {
   render() {
     return (
       // Footer
       <footer class="footer-section" id="footer">
-        <i class="fab fa-twitter spaced-icon"></i><i class="fab fa-facebook-f spaced-icon"></i><i
-          class="fab fa-instagram spaced-icon"></i><i class="fas fa-envelope spaced-icon"></i>
-        <p class="subheading smaller">© Copyright 2020 PetLoves</p>
+        <img class="footer-logo" src={logowhite} alt="PetLoves-logo" />
+        <span class="footer-brand">PetLoves</span>
 
+        <i class="fab fa-twitter spaced"></i>
+        <i class="fab fa-facebook-f spaced"></i>
+        <i class="fab fa-instagram spaced"></i>
+        <i class="fas fa-envelope spaced"></i>
+        <p class="smaller">© Copyright 2020 PetLoves</p>
       </footer>
     );
   }

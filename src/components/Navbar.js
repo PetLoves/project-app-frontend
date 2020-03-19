@@ -1,12 +1,13 @@
 import React from 'react';
 import heartlogo from '../images/heartlogo.png';
-
+import logowhite from '../images/petloveswhite.png';
 class Nav extends React.Component {
   render() {
     return (
       <section class="top-section" id="title">
         <div class="container-fluid top">
           <nav class="navbar navbar-expand-lg navbar-dark">
+            <img class="navbar-logo" src={logowhite} alt="PetLoves-logo" />
             <a class="navbar-brand" href="">
               PetLoves
             </a>
@@ -34,8 +35,12 @@ class Nav extends React.Component {
                   </a>
                 </li> */}
                 <li class="nav-item">
-                  <a class="nav-link" href="#cta">
-                    <i class="far fa-heart fa-2x"></i>
+                  <a class="nav-link" href="">
+                    <i
+                      class="far fa-heart fa-2x"
+                      style={{ marginRight: '10px' }}
+                    ></i>
+                    <i class="far fa-user fa-2x "></i>
                     {/* <img class="small-logo" src={heartlogo} alt="logo" /> */}
                   </a>
                 </li>
