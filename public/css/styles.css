@@ -150,6 +150,7 @@ h6 {
 .petCard {
   padding: 0px;
   margin: 0px;
+  padding-top: 1em;
 }
 
 .petdetail-card {
