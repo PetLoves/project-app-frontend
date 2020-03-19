@@ -51,9 +51,9 @@ class Nav extends React.Component {
           <div class="row">
             <div class="col-md-6">
               <h1 class="big-heading">Find the love of your life.</h1>
-              <button type="button" class="btn btn-outline-light btn-lg">
+              <a type="button" class="btn btn-outline-light btn-lg" href="#features">
                 Search Now
-              </button>
+              </a>
               {/* <button
                 type="button"
                 class="btn btn-outline-light btn-lg downloadbutton"
