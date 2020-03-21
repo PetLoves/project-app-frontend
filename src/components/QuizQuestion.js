@@ -44,7 +44,7 @@ class QuizQuestion extends React.Component {
 
   companyFunc = event => {
     this.setState({
-      companyNeeded: event.target.value
+      companyNeeded: 5 - event.target.value
     });
     console.log(`companyNeeded: ${event.target.value}`);
   };
