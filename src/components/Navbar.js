@@ -5,7 +5,7 @@ class Nav extends React.Component {
   render() {
     return (
       <section className="top-section" id="title">
-        <div classNameName="container-fluid top">
+        <div className="container-fluid top">
           <nav className="navbar navbar-expand-lg navbar-dark">
             <img className="navbar-logo" src={logowhite} alt="PetLoves-logo" />
             <a className="navbar-brand" href="">
