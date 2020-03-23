@@ -4,15 +4,15 @@ import logowhite from '../images/petloveswhite.png';
 class Nav extends React.Component {
   render() {
     return (
-      <section class="top-section" id="title">
-        <div class="container-fluid top">
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <img class="navbar-logo" src={logowhite} alt="PetLoves-logo" />
-            <a class="navbar-brand" href="">
+      <section className="top-section" id="title">
+        <div classNameName="container-fluid top">
+          <nav className="navbar navbar-expand-lg navbar-dark">
+            <img className="navbar-logo" src={logowhite} alt="PetLoves-logo" />
+            <a className="navbar-brand" href="">
               PetLoves
             </a>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNav"
@@ -20,37 +20,37 @@ class Nav extends React.Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="">
                     <i
-                      class="far fa-heart fa-2x"
+                      className="far fa-heart fa-2x"
                       style={{ marginRight: '10px' }}
                     ></i>
-                    <i class="far fa-user fa-2x "></i>
+                    <i className="far fa-user fa-2x "></i>
                   </a>
                 </li>
               </ul>
             </div>
           </nav>
 
-          <div class="row">
-            <div class="col-md-6">
-              <h1 class="big-heading">Find the love of your life.</h1>
+          <div className="row">
+            <div className="col-md-6">
+              <h1 className="big-heading">Find the love of your life.</h1>
               <a
                 type="button"
-                class="btn btn-outline-light btn-lg"
+                className="btn btn-outline-light btn-lg"
                 href="#features"
               >
                 Search Now
               </a>
             </div>
 
-            <div className="col-md-6">
-              <img className="title-image" src={heartlogo} alt="logo" />
+            <div classNameName="col-md-6">
+              <img classNameName="title-image" src={heartlogo} alt="logo" />
             </div>
           </div>
         </div>
