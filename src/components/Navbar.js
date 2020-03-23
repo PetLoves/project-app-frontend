@@ -24,16 +24,6 @@ class Nav extends React.Component {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
-                {/* <li class="nav-item">
-                  <a class="nav-link" href="#footer">
-                    Contact
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#pricing">
-                    Pricing
-                  </a>
-                </li> */}
                 <li class="nav-item">
                   <a class="nav-link" href="">
                     <i
@@ -47,20 +37,17 @@ class Nav extends React.Component {
             </div>
           </nav>
 
+
           <div class="row">
-            <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-12">
-                  <h1 class="big-heading">Find the love of your life.</h1>
-                  <a
-                    type="button"
-                    class="btn btn-outline-light btn-lg"
-                    href="#features"
-                  >
-                    Search Now
-                  </a>
-                </div>
-              </div>
+            <div class="col-md-12">
+              <h1 class="big-heading">Find the love of your life.</h1>
+              <a
+                type="button"
+                class="btn btn-outline-light btn-lg"
+                href="#features"
+              >
+                Search Now
+              </a>
             </div>
             <div className="col-md-6 hidden-xs">
               <img class="title-image" src={heartlogo} alt="logo" />
