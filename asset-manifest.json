@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.b33a6ad5.chunk.js",
-    "main.js.map": "/static/js/main.b33a6ad5.chunk.js.map",
+    "main.js": "/static/js/main.ec741a9c.chunk.js",
+    "main.js.map": "/static/js/main.ec741a9c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ae4f0d9b.js",
     "runtime-main.js.map": "/static/js/runtime-main.ae4f0d9b.js.map",
     "static/js/2.d87278b7.chunk.js": "/static/js/2.d87278b7.chunk.js",
     "static/js/2.d87278b7.chunk.js.map": "/static/js/2.d87278b7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5009ca35417ce501fce63b11158300e9.js": "/precache-manifest.5009ca35417ce501fce63b11158300e9.js",
+    "precache-manifest.c19665724c3f573a0a46d71ba889ec8b.js": "/precache-manifest.c19665724c3f573a0a46d71ba889ec8b.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.d87278b7.chunk.js.LICENSE.txt": "/static/js/2.d87278b7.chunk.js.LICENSE.txt",
     "static/media/battersea.png": "/static/media/battersea.9e3ad106.png",
@@ -22,6 +22,6 @@
   "entrypoints": [
     "static/js/runtime-main.ae4f0d9b.js",
     "static/js/2.d87278b7.chunk.js",
-    "static/js/main.b33a6ad5.chunk.js"
+    "static/js/main.ec741a9c.chunk.js"
   ]
 }
