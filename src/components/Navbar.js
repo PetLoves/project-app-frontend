@@ -37,9 +37,8 @@ class Nav extends React.Component {
             </div>
           </nav>
 
-
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
               <h1 class="big-heading">Find the love of your life.</h1>
               <a
                 type="button"
@@ -49,8 +48,9 @@ class Nav extends React.Component {
                 Search Now
               </a>
             </div>
-            <div className="col-md-6 hidden-xs">
-              <img class="title-image" src={heartlogo} alt="logo" />
+
+            <div className="col-md-6">
+              <img className="title-image" src={heartlogo} alt="logo" />
             </div>
           </div>
         </div>
