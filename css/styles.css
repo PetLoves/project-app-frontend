@@ -1,0 +1,334 @@
+/* Font Styles
+font-family: 'Fredoka One', cursive; */
+
+body {
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', cursive;
+  font-weight: 900;
+}
+
+/* Headings */
+
+.big-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #7fffd4;
+}
+
+.section-heading {
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid {
+  padding: 2% 8%;
+}
+
+/* Sections */
+
+.top-section {
+  /* background-color: #ff4c68; */
+  background-image: url('mutley.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 657px;
+}
+
+.title-image {
+  /* transform: rotate(25deg); */
+  width: 110%;
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  opacity: 0.75;
+}
+
+/* Background quiz */
+.white-section {
+  background-color: #fff;
+
+  position: relative;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 13rem;
+}
+
+.small-logo {
+  width: 60px;
+}
+.navbar-brand {
+  font-family: 'Fredoka One', cursive;
+  /* font-weight: bold; */
+  font-size: 2rem;
+}
+
+.navbar-logo {
+  width: 10%;
+  padding: 1%;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Title Section */
+
+#title {
+  text-align: left;
+}
+
+.Banner {
+  padding-top: 10em;
+  background-color: none;
+  margin-top: 10em;
+  position: absolute;
+}
+
+.logo {
+  width: 80px;
+}
+
+/* img {
+  margin: 2em;
+  position: relative;
+} */
+
+.appName {
+  font-family: 'Exo', sans-serif;
+  margin-top: 3%;
+  font-weight: bolder;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Quiz Question */
+
+/* .question {
+  font-family: 'Montserrat';
+  color: lightgrey;
+} */
+
+.form-style {
+  text-align: left;
+  width: 70%;
+  display: inline-block;
+}
+
+.move-input {
+  padding-left: 0;
+}
+
+.pet-button {
+  margin: 2%;
+}
+
+.headspace {
+  margin-top: 2%;
+}
+
+.petCard {
+  padding: 0px;
+  margin: 0px;
+  padding-top: 1em;
+}
+
+.petdetail-card {
+  border: none;
+  margin-bottom: 5px;
+  border-color: #c7135c;
+}
+
+.col-md-4 {
+  border: none;
+}
+
+.card-title {
+  color: #cea2cb;
+}
+
+.button {
+  background-color: #b95c9d;
+  border: #c7135c;
+  box-shadow: 1px 1px 5px 0px #000000;
+}
+
+.moreDetails {
+  background-color: #cea2cb;
+}
+
+.petdetails {
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  transition: 1.1s ease-out;
+  /* box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2); */
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.petdetails h2 {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  margin: 0;
+}
+.petdetails .content {
+  padding: 1rem;
+}
+.petdetails .actions {
+  border-top: 1px solid #ccc;
+  background: #eee;
+  padding: 0.5rem 1rem;
+}
+.petdetails .actions button {
+  border: 1px solid black;
+  background: #7fffd4;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+#toggle-button {
+  position: absolute;
+}
+
+/* Testimonals Section */
+.info-section {
+  background-color: #cea2cb;
+  color: #fff;
+}
+
+#testimonials {
+  background-color: #cea2cb;
+}
+
+.testimonial-text {
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+.testimonal-img {
+  border-radius: 100%;
+  width: 12%;
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 8% 15% 4% 15%;
+}
+
+/* Partner Section */
+#partners {
+  background-color: #cea2cb;
+  padding-bottom: 3%;
+}
+
+.partner-logo {
+  width: 12%;
+  margin: 30px 30px 40px;
+}
+
+/* adoption Section */
+
+#adoption {
+  padding: 50px;
+}
+
+.adoption-title {
+  font-size: 1.3rem;
+}
+
+.adoption-text {
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+.adoption-column {
+  padding: 3% 2%;
+}
+
+.animal-button {
+  margin-top: 10%;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #cea2cb;
+  color: #fff;
+}
+
+#footer {
+  padding: 5% 12% 1% 12%;
+  line-height: 1.5;
+}
+
+.footer-brand {
+  display: block;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  width: 8%;
+}
+
+.smaller {
+  font-size: 0.8rem;
+}
+
+.spaced {
+  padding: 1%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@supports (offset-rotation: 0deg) {
+  offset-rotation: 0deg;
+  offset-path: path('M 250,100 S -300,500 -700,-200');
+  .modal.off {
+    offset-distance: 100%;
+  }
+}
+@media (prefers-reduced-motion) {
+  .modal {
+    offset-path: none;
+  }
+}
