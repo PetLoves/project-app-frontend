@@ -1,44 +1,18 @@
 import React from 'react';
-import Banner from './Banner';
+import Nav from './Navbar';
 import PetCard from './PetCard';
 import QuizQuestion from './QuizQuestion';
+import Carousel from './Testimonials';
+import Adoption from './Adoption';
 import Footer from './Footer.js';
 import axios from 'axios';
 
 class App extends React.Component {
   state = {
     animals: [],
-    showResult: true,
-    answers: []
+    showResult: false,
+    answers: {}
   };
-
-  componentDidMount = () => {
-    axios
-      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets')
-      .then(response => {
-        this.setState({
-          animals: response.data.petloves
-        });
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  };
-
-  showResult() {
-    this.setState(prevState => ({ showResult: !prevState.showResult }));
-
-    // is the same as:
-    //   if (this.state.showResult) {
-    //     this.setState({
-    //       showResult: false
-    //     });
-    //   } else {
-    //     this.setState({
-    //       showResult: true
-    //     });
-    //   }
-  }
 
   info = animal => {
     return (
@@ -49,25 +23,62 @@ class App extends React.Component {
     );
   };
 
-  findPet = answer => {
-    //alert pulling in state from QuizQuestion
-    alert('I have a garden is ' + answer);
+  findPet = (
+    hasGardenResult,
+    hasChildrenResult,
+    activitylevel,
+    companyNeeded
+  ) => {
+    var numGarden = parseInt(hasGardenResult);
+    var numChildren = parseInt(hasChildrenResult);
+    var numActivityLevel = parseInt(activitylevel);
+    var numCompanyNeeded = parseInt(companyNeeded);
+    const currentAnswers = {
+      hasGarden: numGarden,
+      hasChildren: numChildren,
+      activitylevel: numActivityLevel,
+      companyNeeded: numCompanyNeeded
+    };
+    this.setState({
+      answers: currentAnswers
+    });
+    console.log(this.state.answers);
+    axios
+      .get('https://srtcnv0e2e.execute-api.eu-west-2.amazonaws.com/dev/pets', {
+        params: {
+          hasGarden: numGarden,
+          hasChildren: numChildren,
+          activitylevel: numActivityLevel,
+          companyNeeded: numCompanyNeeded
+        }
+      })
+      .then(response => {
+        this.setState({
+          animals: response.data.petloves
+        });
+        console.log(JSON.stringify(this.state.animals));
+      })
+      .catch(error => {
+        console.error(error);
+      });
   };
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="App">
-          <Banner />
-          {!this.state.showResult ? (
-            <QuizQuestion findPetFunc={this.findPet} />
-          ) : null}
-          {this.state.showResult ? <PetCard pets={this.state.animals} /> : null}
-          <Footer />
-        </div>
+      <div className="App">
+        <Nav />
+        {/* <Banner /> */}
+        <QuizQuestion
+          findPetFunc={this.findPet}
+          hasGarden={this.state.answers.hasGarden}
+          hasChildren={this.state}
+        />
+        <PetCard pets={this.state.animals} />
+        <Carousel />
+        <Adoption />
+        <Footer className="footer-img" />
       </div>
     );
   }
 }
-
 export default App;

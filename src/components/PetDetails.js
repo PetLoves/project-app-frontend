@@ -1,23 +1,32 @@
 import React from 'react';
-import Button from 'Button.js';
+import PropTypes from 'prop-types';
 
-class PetDetails extends React.Component {
+export default class PetDetails extends React.Component {
+  onClose = e => {
+    this.props.onClose && this.props.onClose(e);
+  };
   render() {
-    console.log(this.props.pets);
-
+    console.log(`propsshowing: ${this.props.show}`);
+    if (!this.props.show) {
+      return null;
+    }
     return (
-      <div className="col-md-4 card">
-        <div class="card">
-          <img class="card-img-top" src={this.props.img} alt="Card cap"></img>
-          <div class="card-body">
-            <h4 class="card-title">{this.props.name}</h4>
-            <p class="card-text">{this.props.description}</p>
-            <Button>Learn more</Button>
-          </div>
+      <div className="petdetails" id="petdetails">
+        <h2>{this.props.name}</h2>
+        <div className="content">{this.props.children}</div>
+        <div className="actions ">
+          <i class="fas fa-phone-alt fa-2x float-left"></i>
+          <button className="toggle-button" onClick={this.onClose}>
+            close
+          </button>
+          <i class="fas fa-heart fa-2x float-right"></i>
         </div>
       </div>
     );
   }
 }
 
-export default PetDetails;
+PetDetails.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired
+};
