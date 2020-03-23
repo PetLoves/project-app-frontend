@@ -5,8 +5,8 @@ class QuizQuestion extends React.Component {
     hasGarden: 0,
     hasChildren: 0,
     activitylevel: 1,
-    companyNeeded: 4,
-    label: 4
+    companyNeeded: 1,
+    label: 1
   };
 
   submitFunc = event => {
@@ -44,7 +44,7 @@ class QuizQuestion extends React.Component {
 
   companyFunc = event => {
     this.setState({
-      companyNeeded: event.target.value
+      companyNeeded: 5 - event.target.value
     });
     console.log(`companyNeeded: ${event.target.value}`);
   };
