@@ -37,21 +37,21 @@ class Nav extends React.Component {
             </div>
           </nav>
 
-          <div class="row">
-            <div class="col-md-6">
-              <h1 class="big-heading">Find the love of your life.</h1>
-            </div>
 
-            <a
-              type="button"
-              className="btn btn-outline-light btn-lg"
-              href="#features"
-            >
-              Search Now
-            </a>
-          </div>
-          <div className="col-md-6">
-            <img class="title-image" src={heartlogo} alt="logo" />
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="big-heading">Find the love of your life.</h1>
+              <a
+                type="button"
+                class="btn btn-outline-light btn-lg"
+                href="#features"
+              >
+                Search Now
+              </a>
+            </div>
+            <div className="col-md-6 hidden-xs">
+              <img class="title-image" src={heartlogo} alt="logo" />
+            </div>
           </div>
         </div>
       </section>

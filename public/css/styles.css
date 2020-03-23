@@ -356,6 +356,7 @@ h6 {
 
 @media (max-width: 375px) {
   .navbar {
-    padding-bottom: 200px;
+    padding-top: 120px;
+    padding-bottom: 15px;
   }
 }
