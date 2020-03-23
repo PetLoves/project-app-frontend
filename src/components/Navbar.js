@@ -41,7 +41,6 @@ class Nav extends React.Component {
                       style={{ marginRight: '10px' }}
                     ></i>
                     <i class="far fa-user fa-2x "></i>
-                    {/* <img class="small-logo" src={heartlogo} alt="logo" /> */}
                   </a>
                 </li>
               </ul>
@@ -51,16 +50,13 @@ class Nav extends React.Component {
           <div class="row">
             <div class="col-md-6">
               <h1 class="big-heading">Find the love of your life.</h1>
-              <a type="button" class="btn btn-outline-light btn-lg" href="#features">
+              <a
+                type="button"
+                class="btn btn-outline-light btn-lg"
+                href="#features"
+              >
                 Search Now
               </a>
-              {/* <button
-                type="button"
-                class="btn btn-outline-light btn-lg downloadbutton"
-              >
-                <i class="fab fa-google-play"></i>
-                Download
-              </button> */}
             </div>
             <div class="col-md-6">
               <img class="title-image" src={heartlogo} alt="logo" />
