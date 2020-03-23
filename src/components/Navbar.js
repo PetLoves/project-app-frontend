@@ -49,8 +49,8 @@ class Nav extends React.Component {
               </a>
             </div>
 
-            <div classNameName="col-md-6">
-              <img classNameName="title-image" src={heartlogo} alt="logo" />
+            <div className="col-md-6">
+              <img className="title-image" src={heartlogo} alt="logo" />
             </div>
           </div>
         </div>
